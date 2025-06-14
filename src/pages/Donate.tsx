@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { ArrowLeft, Heart, Users, QrCode, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Heart, Users, QrCode, CheckCircle, Copy } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -44,6 +45,22 @@ const Donate = () => {
       setVolunteerAreas([...volunteerAreas, area]);
     } else {
       setVolunteerAreas(volunteerAreas.filter(item => item !== area));
+    }
+  };
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('saranshsewatrust@paytm');
+      toast({
+        title: "कॉपी किया गया! • Copied!",
+        description: "UPI ID आपके क्लिपबोर्ड में कॉपी हो गई है • UPI ID copied to clipboard",
+      });
+    } catch (err) {
+      toast({
+        title: "त्रुटि • Error",
+        description: "कॉपी नहीं हो सका • Could not copy to clipboard",
+        variant: "destructive"
+      });
     }
   };
 
@@ -155,10 +172,18 @@ const Donate = () => {
                       {/* UPI ID Section */}
                       <div className="bg-orange-50 rounded-lg p-4 text-left">
                         <h4 className="font-semibold text-gray-900 mb-2">UPI ID</h4>
-                        <div className="bg-white rounded p-3 border border-orange-200">
-                          <p className="text-lg font-mono text-center text-gray-800">
+                        <div className="bg-white rounded p-3 border border-orange-200 flex items-center justify-between">
+                          <p className="text-lg font-mono text-gray-800">
                             saranshsewatrust@paytm
                           </p>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={copyToClipboard}
+                            className="ml-2 h-8 w-8 p-0 hover:bg-orange-100"
+                          >
+                            <Copy className="h-4 w-4" />
+                          </Button>
                         </div>
                       </div>
                       
