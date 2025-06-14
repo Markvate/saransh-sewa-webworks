@@ -29,35 +29,35 @@ const Header = () => {
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 relative">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+            <div className="w-8 h-8 sm:w-12 sm:h-12 relative">
               <img 
                 src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
                 alt="Saransh Sewa Trust Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-xl font-poppins font-bold text-gray-900">
+            <span className="text-base sm:text-xl font-poppins font-bold text-gray-900 hidden xs:block">
               Saransh Sewa Trust
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200 relative group"
+                className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200 relative group text-sm xl:text-base"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
             <Link to="/donate">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105">
+              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 xl:px-6 xl:py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm xl:text-base">
                 Donate Now
               </Button>
             </Link>
@@ -65,30 +65,31 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-gray-700 hover:text-orange-500 transition-colors"
+            className="lg:hidden text-gray-700 hover:text-orange-500 transition-colors p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 py-4 animate-fade-in">
-            <nav className="flex flex-col space-y-4">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 py-4 animate-fade-in">
+            <nav className="flex flex-col space-y-2">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-700 hover:text-orange-500 font-medium px-4 py-2 transition-colors duration-200"
+                  className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-4">
-                <Link to="/donate">
-                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2 rounded-full font-medium">
+              <div className="px-4 pt-2">
+                <Link to="/donate" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-full font-medium">
                     Donate Now
                   </Button>
                 </Link>

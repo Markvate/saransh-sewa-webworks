@@ -93,6 +93,23 @@
 
   body {
     @apply bg-background text-foreground font-inter;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  }
+
+  /* Ensure consistent box-sizing */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
   }
 }
 
@@ -117,4 +134,37 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Prevent content from being too close to edges */
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Better touch targets for mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Fix for potential layout shifts */
+@media (max-width: 1024px) {
+  .lg\:hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex !important;
+  }
 }
