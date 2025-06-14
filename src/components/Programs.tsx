@@ -1,6 +1,8 @@
+
 import { GraduationCap, Heart, Users, Leaf, Briefcase, Home, Utensils } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
+import MembershipModal from './MembershipModal';
 
 const Programs = () => {
   const navigate = useNavigate();
@@ -144,9 +146,7 @@ const Programs = () => {
               गरीबों और जरूरतमंदों को भोजन प्रदान करने के हमारे मिशन में शामिल हों
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105">
-                अभी स्वयंसेवक बनें • Volunteer Now
-              </button>
+              <MembershipModal />
               <button 
                 onClick={() => navigate('/donate')}
                 className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
