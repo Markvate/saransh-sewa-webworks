@@ -1,9 +1,13 @@
-import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Contact = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   const contactInfo = [
     {
       icon: Phone,
@@ -270,12 +274,37 @@ const Contact = () => {
               Together, we can create lasting change in our communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Become a Volunteer
-              </Button>
+              <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+                <DialogTrigger asChild>
+                  <Button 
+                    size="lg"
+                    className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+                  >
+                    Become a Volunteer
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0">
+                  <DialogHeader className="px-6 py-4">
+                    <DialogTitle className="flex items-center space-x-2 text-orange-600">
+                      <Users className="h-6 w-6" />
+                      <span>सदस्यता फॉर्म • Membership Form</span>
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="px-6 pb-6">
+                    <iframe 
+                      src="https://docs.google.com/forms/d/e/1FAIpQLScGGmtRUkDNJwpv5yifpsMfDveaFZN9nSiS22Uw6D2SluAFCQ/viewform?embedded=true" 
+                      width="100%" 
+                      height="600" 
+                      frameBorder="0" 
+                      marginHeight={0} 
+                      marginWidth={0}
+                      className="w-full border-0 rounded-lg"
+                    >
+                      Loading…
+                    </iframe>
+                  </div>
+                </DialogContent>
+              </Dialog>
               <Button 
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
