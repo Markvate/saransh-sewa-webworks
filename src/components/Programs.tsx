@@ -1,8 +1,17 @@
-import { GraduationCap, Heart, Users, Leaf, Briefcase, Home } from 'lucide-react';
+
+import { GraduationCap, Heart, Users, Leaf, Briefcase, Home, Utensils } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const Programs = () => {
   const programs = [
+    {
+      icon: Utensils,
+      title: 'भोजन सेवा • Food Service',
+      description: 'गरीबों और जरूरतमंदों को नियमित भोजन प्रदान करना, भूख मिटाना और पोषण सुनिश्चित करना।',
+      features: ['दैनिक भोजन वितरण', 'आपातकालीन खाद्य सहायता', 'पोषण कार्यक्रम', 'सामुदायिक रसोई'],
+      color: 'from-green-500 to-green-600',
+      image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&h=300&fit=crop&crop=center'
+    },
     {
       icon: GraduationCap,
       title: 'शिक्षा सहायता • Education Support',
@@ -17,7 +26,7 @@ const Programs = () => {
       description: 'ग्रामीण समुदायों को आवश्यक स्वास्थ्य सेवाएं और स्वास्थ्य जागरूकता कार्यक्रम प्रदान करना।',
       features: ['मोबाइल स्वास्थ्य क्लिनिक', 'टीकाकरण अभियान', 'स्वास्थ्य जागरूकता शिविर', 'आपातकालीन चिकित्सा सहायता'],
       color: 'from-red-500 to-red-600',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=300&fit=crop&crop=center'
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=300&fit=crop&crop=center'
     },
     {
       icon: Users,
@@ -66,7 +75,7 @@ const Programs = () => {
           </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            सामुदायिक विकास और सशक्तिकरण के विभिन्न पहलुओं को संबोधित करने के लिए डिज़ाइन की गई व्यापक पहल
+            भोजन सेवा से शुरू होकर सामुदायिक विकास तक - गरीबों और जरूरतमंदों की व्यापक सेवा के लिए डिज़ाइन की गई पहल
           </p>
         </div>
 
@@ -124,20 +133,20 @@ const Programs = () => {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-poppins font-bold mb-4">
-              बदलाव लाने के लिए तैयार हैं?
+              भूख मिटाने में हमारी मदद करें
             </h3>
             <h4 className="text-2xl font-poppins font-semibold mb-4">
-              Ready to Make a Difference?
+              Help Us Fight Hunger
             </h4>
             <p className="text-xl mb-6 opacity-90">
-              समुदायों को बदलने और जीवन को सशक्त बनाने के हमारे मिशन में शामिल हों
+              गरीबों और जरूरतमंदों को भोजन प्रदान करने के हमारे मिशन में शामिल हों
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105">
                 अभी स्वयंसेवक बनें • Volunteer Now
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105">
-                हमारे उद्देश्य का समर्थन करें • Support Our Cause
+                भोजन सेवा में योगदान • Support Food Service
               </button>
             </div>
           </div>

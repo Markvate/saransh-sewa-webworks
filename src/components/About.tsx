@@ -1,3 +1,4 @@
+
 import { Heart, Users, Target, Award } from 'lucide-react';
 
 const About = () => {
@@ -37,7 +38,7 @@ const About = () => {
           </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            उत्तर प्रदेश के ग्रामीण समुदायों में स्थायी सकारात्मक बदलाव लाने के दृष्टिकोण के साथ स्थापित
+            गरीबों और जरूरतमंदों को भोजन प्रदान करने के मुख्य उद्देश्य के साथ समुदायिक सेवा में समर्पित
           </p>
         </div>
 
@@ -56,16 +57,13 @@ const About = () => {
             </h3>
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                सरांश सेवा ट्रस्ट का जन्म सुल्तानपुर और उत्तर प्रदेश के आसपास के क्षेत्रों के वंचित समुदायों की सेवा करने की गहरी प्रतिबद्धता से हुआ है। हमारी यात्रा इस सरल विश्वास के साथ शुरू हुई कि हर व्यक्ति शिक्षा, स्वास्थ्य सेवा और विकास के अवसरों जैसी बुनियादी आवश्यकताओं तक पहुंच का हकदार है।
+                सरांश सेवा ट्रस्ट की स्थापना एक सरल लेकिन शक्तिशाली विश्वास के साथ हुई - कि कोई भी व्यक्ति भूखा न सोए। हमारा मुख्य मिशन गरीबों और जरूरतमंदों को भोजन प्रदान करना है, क्योंकि हम मानते हैं कि भोजन एक मूलभूत अधिकार है, विशेषाधिकार नहीं।
               </p>
               <p>
-                What started as a small initiative has grown into a comprehensive organization working 
-                across multiple sectors. We believe in empowering communities from within, fostering 
-                self-reliance, and creating sustainable solutions that address root causes rather than 
-                just symptoms.
+                Our journey began with the simple act of feeding the hungry in Sultanpur and surrounding areas of Uttar Pradesh. What started as distributing meals to those in need has grown into a comprehensive mission that addresses hunger at its core while also supporting education, healthcare, and community development.
               </p>
               <p>
-                आज, हमारा काम शिक्षा, स्वास्थ्य सेवा, महिला सशक्तिकरण, कौशल विकास और पर्यावरणीय स्थिरता में फैला हुआ है। प्रत्येक कार्यक्रम गहन सामुदायिक परामर्श के साथ डिज़ाइन किया गया है और इसके मूल में स्थानीय नेतृत्व के साथ लागू किया गया है।
+                आज हमारे भोजन कार्यक्रम के साथ-साथ, हम शिक्षा, स्वास्थ्य सेवा, महिला सशक्तिकरण, और सामुदायिक विकास के क्षेत्र में भी काम करते हैं। हर कार्यक्रम का उद्देश्य समुदायों को आत्मनिर्भर बनाना और दीर्घकालिक समाधान प्रदान करना है।
               </p>
             </div>
           </div>
@@ -78,7 +76,7 @@ const About = () => {
               </div>
               <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">हमारा मिशन • Our Mission</h4>
               <p className="text-gray-600 leading-relaxed">
-                शिक्षा, स्वास्थ्य सेवा और सतत विकास में व्यापक कार्यक्रमों के माध्यम से ग्रामीण समुदायों को सशक्त बनाना, सभी के लिए आत्मनिर्भरता और गरिमा को बढ़ावा देना।
+                गरीबों और जरूरतमंदों को भोजन प्रदान करना हमारा प्राथमिक उद्देश्य है। साथ ही शिक्षा, स्वास्थ्य सेवा और सतत विकास के माध्यम से समुदायों को सशक्त बनाना, सभी के लिए आत्मनिर्भरता और गरिमा को बढ़ावा देना।
               </p>
             </div>
 
@@ -88,7 +86,7 @@ const About = () => {
               </div>
               <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">हमारा दृष्टिकोण • Our Vision</h4>
               <p className="text-gray-600 leading-relaxed">
-                एक ऐसा समाज जहां हर व्यक्ति के पास अवसरों, संसाधनों और गरिमा और उद्देश्य के साथ जीने के मौके तक समान पहुंच हो।
+                एक ऐसा समाज जहां कोई भी व्यक्ति भूखा न सोए और हर व्यक्ति के पास भोजन, शिक्षा, स्वास्थ्य और विकास के अवसरों तक समान पहुंच हो।
               </p>
             </div>
           </div>
