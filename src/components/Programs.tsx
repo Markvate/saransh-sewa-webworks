@@ -1,4 +1,3 @@
-
 import { GraduationCap, Heart, Users, Leaf, Briefcase, Home, Utensils } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
@@ -26,7 +25,7 @@ const Programs = () => {
       description: 'ग्रामीण समुदायों को आवश्यक स्वास्थ्य सेवाएं और स्वास्थ्य जागरूकता कार्यक्रम प्रदान करना।',
       features: ['मोबाइल स्वास्थ्य क्लिनिक', 'टीकाकरण अभियान', 'स्वास्थ्य जागरूकता शिविर', 'आपातकालीन चिकित्सा सहायता'],
       color: 'from-red-500 to-red-600',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=300&fit=crop&crop=center'
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=300&fit=crop&crop=center'
     },
     {
       icon: Users,
