@@ -171,12 +171,12 @@ const Contact = () => {
 
           {/* Contact Form - match height to Contact Info section */}
           <div className="flex flex-col h-full justify-stretch">
-            <Card className="p-8 border-0 shadow-lg flex flex-col h-full justify-between">
+            <Card className="py-6 px-8 border-0 shadow-lg flex flex-col h-full justify-between">
               <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
                 Send us a Message
               </h3>
               
-              <form className="space-y-6 flex flex-col flex-grow">
+              <form className="space-y-4 flex flex-col flex-grow">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -234,13 +234,13 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <div className="flex-grow flex flex-col">
+                <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none flex-grow"
+                    rows={3}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none"
                     placeholder="Tell us how you'd like to get involved or support our cause..."
                   ></textarea>
                 </div>
