@@ -55,9 +55,11 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-200 group-hover:w-full"></span>
               </a>
             ))}
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105">
-              Donate Now
-            </Button>
+            <a href="/donate">
+              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105">
+                Donate Now
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -84,9 +86,11 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-4">
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2 rounded-full font-medium">
-                  Donate Now
-                </Button>
+                <a href="/donate">
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2 rounded-full font-medium">
+                    Donate Now
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>
