@@ -147,16 +147,31 @@ const Donate = () => {
                       </p>
                     </div>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <h3 className="text-lg font-semibold text-gray-900">
-                        बैंक विवरण • Bank Details
+                        दान के तरीके • Payment Methods
                       </h3>
-                      <div className="bg-gray-50 rounded-lg p-4 text-left space-y-2">
-                        <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
-                        <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
-                        <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
-                        <p><strong>Bank:</strong> State Bank of India</p>
-                        <p><strong>Branch:</strong> Sultanpur, UP</p>
+                      
+                      {/* UPI ID Section */}
+                      <div className="bg-orange-50 rounded-lg p-4 text-left">
+                        <h4 className="font-semibold text-gray-900 mb-2">UPI ID</h4>
+                        <div className="bg-white rounded p-3 border border-orange-200">
+                          <p className="text-lg font-mono text-center text-gray-800">
+                            saranshsewatrust@paytm
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* Bank Details Section */}
+                      <div className="bg-gray-50 rounded-lg p-4 text-left">
+                        <h4 className="font-semibold text-gray-900 mb-2">बैंक विवरण • Bank Details</h4>
+                        <div className="space-y-2 text-sm">
+                          <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
+                          <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
+                          <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
+                          <p><strong>Bank:</strong> State Bank of India</p>
+                          <p><strong>Branch:</strong> Sultanpur, UP</p>
+                        </div>
                       </div>
                     </div>
 
