@@ -1,4 +1,3 @@
-
 import { ArrowRight, Heart, Users, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -83,7 +82,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="bg-gradient-to-r from-white/20 to-white/30 backdrop-blur-md border-3 border-white/60 text-white hover:bg-white hover:text-orange-600 px-12 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-110 shadow-xl hover:shadow-2xl ring-2 ring-white/30 hover:ring-white/60"
+                className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 और जानें • Learn More
               </Button>
