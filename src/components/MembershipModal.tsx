@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Users, CheckCircle } from 'lucide-react';
@@ -63,18 +62,43 @@ const MembershipModal = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "सदस्यता आवेदन सफल! • Membership Application Successful!",
-      description: "हम जल्द ही आपसे संपर्क करेंगे • We will contact you soon",
-    });
+    try {
+      // Create form data for Google Form submission
+      const formData = new FormData();
+      
+      // Map form fields to Google Form entry IDs (you'll need to inspect your form to get these)
+      formData.append('entry.1234567890', data.fullName); // Replace with actual entry ID
+      formData.append('entry.0987654321', data.email); // Replace with actual entry ID
+      formData.append('entry.1111111111', data.phone); // Replace with actual entry ID
+      formData.append('entry.2222222222', data.address); // Replace with actual entry ID
+      formData.append('entry.3333333333', data.occupation); // Replace with actual entry ID
+      formData.append('entry.4444444444', data.motivation); // Replace with actual entry ID
+      formData.append('entry.5555555555', volunteerAreas.join(', ')); // Replace with actual entry ID
+      
+      // Submit to Google Form
+      await fetch('https://docs.google.com/forms/d/e/1FAIpQLScGGmtRUkDNJwpv5yifpsMfDveaFZN9nSiS22Uw6D2SluAFCQ/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      });
+      
+      toast({
+        title: "सदस्यता आवेदन सफल! • Membership Application Successful!",
+        description: "हम जल्द ही आपसे संपर्क करेंगे • We will contact you soon",
+      });
+      
+      setOpen(false);
+      reset();
+      setVolunteerAreas([]);
+    } catch (error) {
+      toast({
+        title: "त्रुटि • Error",
+        description: "कृपया बाद में पुनः प्रयास करें • Please try again later",
+        variant: "destructive"
+      });
+    }
     
     setIsSubmitting(false);
-    setOpen(false);
-    reset();
-    setVolunteerAreas([]);
   };
 
   return (
