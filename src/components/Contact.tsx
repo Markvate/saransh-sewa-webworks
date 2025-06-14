@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -294,7 +295,7 @@ const Contact = () => {
                     <iframe 
                       src="https://docs.google.com/forms/d/e/1FAIpQLScGGmtRUkDNJwpv5yifpsMfDveaFZN9nSiS22Uw6D2SluAFCQ/viewform?embedded=true" 
                       width="100%" 
-                      height="600" 
+                      height="1400" 
                       frameBorder="0" 
                       marginHeight={0} 
                       marginWidth={0}
@@ -305,12 +306,14 @@ const Contact = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button 
-                size="lg"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Make a Donation
-              </Button>
+              <Link to="/donate">
+                <Button 
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+                >
+                  Make a Donation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
