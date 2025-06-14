@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -37,18 +36,18 @@ const Contact = () => {
 
   const leadershipTeam = [
     {
+      name: 'Karan Shukla',
+      role: 'Founder • संस्थापक',
+      phone: '+91 9415607400',
+      image: '/lovable-uploads/5a9158ee-649c-495b-99be-9f7131132915.png',
+      initials: 'KS'
+    },
+    {
       name: 'Pandit Sudhanshu Tiwari Ji',
       role: 'President • अध्यक्ष',
       phone: '+91 9005804713',
       image: '/lovable-uploads/d0b6793d-ab49-4f0c-b75d-a72c2df9d156.png',
       initials: 'ST'
-    },
-    {
-      name: 'Karan Shukla',
-      role: 'Founder • संस्थापक',
-      phone: '+91 9415607400',
-      image: '/lovable-uploads/2b7a2dc2-269e-4372-8e71-0be700a588eb.png',
-      initials: 'KS'
     }
   ];
 
