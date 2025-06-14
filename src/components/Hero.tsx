@@ -31,10 +31,10 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 leading-tight">
-            समुदाय को सशक्त बनाना,
+            सेवा ही संकल्प,
             <span className="block text-orange-300">जीवन को बदलना</span>
             <span className="block text-3xl md:text-4xl mt-2 opacity-90">
-              Empowering Communities, Transforming Lives
+              Service is our pledge, Transforming Lives
             </span>
           </h1>
 
