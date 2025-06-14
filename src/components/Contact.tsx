@@ -170,13 +170,13 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form - aligned to start at same position as Contact Information */}
+          {/* Contact Form */}
           <div className="flex flex-col h-full">
+            <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
+              Send us a Message
+            </h3>
+            
             <Card className="py-8 px-8 border-0 shadow-lg flex-grow flex flex-col">
-              <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
-                Send us a Message
-              </h3>
-              
               <form className="space-y-6 flex-grow flex flex-col">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
