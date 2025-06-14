@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Heart, QrCode, Copy } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -72,10 +73,10 @@ const Donate = () => {
                   आपका हर योगदान मायने रखता है • Every contribution matters
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-8">
                 <div className="text-center space-y-6">
-                  <div className="bg-white border-4 border-orange-200 rounded-lg p-6 inline-block">
-                    <QrCode className="h-48 w-48 mx-auto text-gray-800 mb-4" />
+                  <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
+                    <QrCode className="h-32 w-32 sm:h-48 sm:w-48 mx-auto text-gray-800 mb-4" />
                     <p className="text-sm text-gray-600 font-medium">
                       QR कोड स्कैन करें • Scan QR Code to Donate
                     </p>
@@ -89,18 +90,20 @@ const Donate = () => {
                     {/* UPI ID Section */}
                     <div className="bg-orange-50 rounded-lg p-4 text-left">
                       <h4 className="font-semibold text-gray-900 mb-2">UPI ID</h4>
-                      <div className="bg-white rounded p-3 border border-orange-200 flex items-center justify-between">
-                        <p className="text-lg font-mono text-gray-800">
-                          saranshsewatrust@paytm
-                        </p>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={copyToClipboard}
-                          className="ml-2 h-8 w-8 p-0 hover:bg-orange-100"
-                        >
-                          <Copy className="h-4 w-4" />
-                        </Button>
+                      <div className="bg-white rounded p-3 border border-orange-200">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                          <p className="text-sm sm:text-lg font-mono text-gray-800 break-all">
+                            saranshsewatrust@paytm
+                          </p>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={copyToClipboard}
+                            className="self-end sm:self-auto h-8 w-8 p-0 hover:bg-orange-100 flex-shrink-0"
+                          >
+                            <Copy className="h-4 w-4" />
+                          </Button>
+                        </div>
                       </div>
                     </div>
                     
