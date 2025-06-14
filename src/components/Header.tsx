@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,11 +17,11 @@ const Header = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Impact', href: '#impact' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Programs', href: '/programs' },
+    { name: 'Impact', href: '/impact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -30,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 relative">
               <img 
                 src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
@@ -41,25 +42,25 @@ const Header = () => {
             <span className="text-xl font-poppins font-bold text-gray-900">
               Saransh Sewa Trust
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
-            <a href="/donate">
+            <Link to="/donate">
               <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105">
                 Donate Now
               </Button>
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -76,21 +77,21 @@ const Header = () => {
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 py-4 animate-fade-in">
             <nav className="flex flex-col space-y-4">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-700 hover:text-orange-500 font-medium px-4 py-2 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="px-4">
-                <a href="/donate">
+                <Link to="/donate">
                   <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2 rounded-full font-medium">
                     Donate Now
                   </Button>
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

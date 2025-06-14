@@ -1,5 +1,7 @@
+
 import { ArrowRight, Heart, Users, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,7 +16,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/80 via-orange-600/70 to-black/60"></div>
       </div>
       
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-orange-300/20 rounded-full blur-3xl animate-pulse"></div>
@@ -69,7 +70,7 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/donate">
+            <Link to="/donate">
               <Button 
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105 group"
@@ -77,14 +78,16 @@ const Hero = () => {
                 शामिल हों • Get Involved
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-            </a>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="bg-orange-500/20 backdrop-blur-sm border-2 border-orange-400 text-white hover:bg-orange-500 hover:border-orange-500 px-10 py-4 rounded-full font-bold text-xl transition-all duration-200 transform hover:scale-110 shadow-lg hover:shadow-xl"
-            >
-              और जानें • Learn More
-            </Button>
+            </Link>
+            <Link to="/about">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="bg-gradient-to-r from-white/20 to-white/30 backdrop-blur-md border-3 border-white/60 text-white hover:bg-white hover:text-orange-600 px-12 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-110 shadow-xl hover:shadow-2xl ring-2 ring-white/30 hover:ring-white/60"
+              >
+                और जानें • Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

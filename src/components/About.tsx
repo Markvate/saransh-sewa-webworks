@@ -1,4 +1,3 @@
-
 import { Heart, Users, Target, Award } from 'lucide-react';
 
 const About = () => {
@@ -43,12 +42,12 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left side - Story with Indian village image */}
+          {/* Left side - Story with Indian rural village image */}
           <div className="animate-slide-in-left">
             <div className="mb-6 rounded-2xl overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=600&h=400&fit=crop"
-                alt="Rural Indian landscape"
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=400&fit=crop"
+                alt="Traditional Indian village with rural community"
                 className="w-full h-64 object-cover"
               />
             </div>
