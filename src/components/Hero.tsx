@@ -5,9 +5,15 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500 via-orange-600 to-black"></div>
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1466442929976-97f336a657be?w=1920&h=1080&fit=crop"
+          alt="Indian village landscape"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/80 via-orange-600/70 to-black/60"></div>
+      </div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -20,17 +26,23 @@ const Hero = () => {
           {/* Location badge */}
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <MapPin className="h-4 w-4 mr-2" />
-            <span className="text-sm font-medium">Sultanpur, Uttar Pradesh</span>
+            <span className="text-sm font-medium">सुल्तानपुर, उत्तर प्रदेश • Sultanpur, Uttar Pradesh</span>
           </div>
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 leading-tight">
-            Empowering Communities,
-            <span className="block text-orange-300">Transforming Lives</span>
+            समुदाय को सशक्त बनाना,
+            <span className="block text-orange-300">जीवन को बदलना</span>
+            <span className="block text-3xl md:text-4xl mt-2 opacity-90">
+              Empowering Communities, Transforming Lives
+            </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            सरांश सेवा ट्रस्ट ग्रामीण समुदायों में शिक्षा, स्वास्थ्य सेवा और सतत विकास कार्यक्रमों के माध्यम से सकारात्मक बदलाव लाने के लिए समर्पित है।
+          </p>
+          <p className="text-lg mb-8 text-gray-300 max-w-3xl mx-auto">
             Saransh Sewa Trust is dedicated to creating positive change in rural communities through education, healthcare, and sustainable development programs.
           </p>
 
@@ -41,21 +53,21 @@ const Hero = () => {
                 <Users className="h-8 w-8 text-orange-300" />
               </div>
               <div className="text-2xl font-bold text-white">1000+</div>
-              <div className="text-sm text-gray-200">Lives Impacted</div>
+              <div className="text-sm text-gray-200">Lives Impacted • प्रभावित जीवन</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:scale-105 transition-transform duration-200">
               <div className="flex items-center justify-center mb-2">
                 <Heart className="h-8 w-8 text-orange-300" />
               </div>
               <div className="text-2xl font-bold text-white">50+</div>
-              <div className="text-sm text-gray-200">Programs</div>
+              <div className="text-sm text-gray-200">Programs • कार्यक्रम</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:scale-105 transition-transform duration-200">
               <div className="flex items-center justify-center mb-2">
                 <MapPin className="h-8 w-8 text-orange-300" />
               </div>
               <div className="text-2xl font-bold text-white">25+</div>
-              <div className="text-sm text-gray-200">Villages</div>
+              <div className="text-sm text-gray-200">Villages • गांव</div>
             </div>
           </div>
 
@@ -65,7 +77,7 @@ const Hero = () => {
               size="lg"
               className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105 group"
             >
-              Get Involved
+              शामिल हों • Get Involved
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -73,7 +85,7 @@ const Hero = () => {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
             >
-              Learn More
+              और जानें • Learn More
             </Button>
           </div>
         </div>

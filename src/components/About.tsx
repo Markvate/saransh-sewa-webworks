@@ -5,23 +5,23 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Compassion',
-      description: 'We approach every initiative with empathy and genuine care for community needs.'
+      title: 'करुणा • Compassion',
+      description: 'हम समुदायिक आवश्यकताओं के लिए सहानुभूति और वास्तविक देखभाल के साथ हर पहल का दृष्टिकोण अपनाते हैं।'
     },
     {
       icon: Users,
-      title: 'Community',
-      description: 'Building strong, self-sustaining communities through collaborative efforts.'
+      title: 'समुदाय • Community',
+      description: 'सहयोगात्मक प्रयासों के माध्यम से मजबूत, आत्मनिर्भर समुदायों का निर्माण करना।'
     },
     {
       icon: Target,
-      title: 'Impact',
-      description: 'Focused on creating measurable, long-term positive change.'
+      title: 'प्रभाव • Impact',
+      description: 'मापने योग्य, दीर्घकालिक सकारात्मक बदलाव लाने पर ध्यान केंद्रित करना।'
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'Committed to the highest standards in all our programs and services.'
+      title: 'उत्कृष्टता • Excellence',
+      description: 'हमारे सभी कार्यक्रमों और सेवाओं में उच्चतम मानकों के लिए प्रतिबद्ध।'
     }
   ];
 
@@ -31,26 +31,33 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-4">
-            About <span className="text-orange-500">Saransh Sewa Trust</span>
+            सरांश सेवा ट्रस्ट के बारे में
           </h2>
+          <h3 className="text-3xl md:text-4xl font-poppins font-semibold text-orange-500 mb-4">
+            About <span className="text-orange-500">Saransh Sewa Trust</span>
+          </h3>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Founded with a vision to create lasting positive change in rural communities across Uttar Pradesh
+            उत्तर प्रदेश के ग्रामीण समुदायों में स्थायी सकारात्मक बदलाव लाने के दृष्टिकोण के साथ स्थापित
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left side - Story */}
+          {/* Left side - Story with Indian village image */}
           <div className="animate-slide-in-left">
+            <div className="mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1493962853295-0fd70327578a?w=600&h=400&fit=crop"
+                alt="Rural Indian landscape"
+                className="w-full h-64 object-cover"
+              />
+            </div>
             <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-6">
-              Our Story
+              हमारी कहानी • Our Story
             </h3>
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                Saransh Sewa Trust was born from a deep commitment to serve the underserved communities 
-                of Sultanpur and surrounding regions in Uttar Pradesh. Our journey began with a simple 
-                belief that every individual deserves access to basic necessities like education, 
-                healthcare, and opportunities for growth.
+                सरांश सेवा ट्रस्ट का जन्म सुल्तानपुर और उत्तर प्रदेश के आसपास के क्षेत्रों के वंचित समुदायों की सेवा करने की गहरी प्रतिबद्धता से हुआ है। हमारी यात्रा इस सरल विश्वास के साथ शुरू हुई कि हर व्यक्ति शिक्षा, स्वास्थ्य सेवा और विकास के अवसरों जैसी बुनियादी आवश्यकताओं तक पहुंच का हकदार है।
               </p>
               <p>
                 What started as a small initiative has grown into a comprehensive organization working 
@@ -59,9 +66,7 @@ const About = () => {
                 just symptoms.
               </p>
               <p>
-                Today, our work spans across education, healthcare, women's empowerment, skill development, 
-                and environmental sustainability. Each program is designed with deep community consultation 
-                and implemented with local leadership at its core.
+                आज, हमारा काम शिक्षा, स्वास्थ्य सेवा, महिला सशक्तिकरण, कौशल विकास और पर्यावरणीय स्थिरता में फैला हुआ है। प्रत्येक कार्यक्रम गहन सामुदायिक परामर्श के साथ डिज़ाइन किया गया है और इसके मूल में स्थानीय नेतृत्व के साथ लागू किया गया है।
               </p>
             </div>
           </div>
@@ -72,10 +77,9 @@ const About = () => {
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-lg w-fit mb-4">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">Our Mission</h4>
+              <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">हमारा मिशन • Our Mission</h4>
               <p className="text-gray-600 leading-relaxed">
-                To empower rural communities through comprehensive programs in education, healthcare, 
-                and sustainable development, fostering self-reliance and dignity for all.
+                शिक्षा, स्वास्थ्य सेवा और सतत विकास में व्यापक कार्यक्रमों के माध्यम से ग्रामीण समुदायों को सशक्त बनाना, सभी के लिए आत्मनिर्भरता और गरिमा को बढ़ावा देना।
               </p>
             </div>
 
@@ -83,10 +87,9 @@ const About = () => {
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-lg w-fit mb-4">
                 <Heart className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">Our Vision</h4>
+              <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-4">हमारा दृष्टिकोण • Our Vision</h4>
               <p className="text-gray-600 leading-relaxed">
-                A society where every individual has equal access to opportunities, resources, 
-                and the chance to live with dignity and purpose.
+                एक ऐसा समाज जहां हर व्यक्ति के पास अवसरों, संसाधनों और गरिमा और उद्देश्य के साथ जीने के मौके तक समान पहुंच हो।
               </p>
             </div>
           </div>
@@ -95,7 +98,7 @@ const About = () => {
         {/* Values */}
         <div className="animate-fade-in">
           <h3 className="text-3xl font-poppins font-semibold text-gray-900 text-center mb-12">
-            Our Core Values
+            हमारे मूल मूल्य • Our Core Values
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -109,7 +112,7 @@ const About = () => {
                 <h4 className="text-xl font-poppins font-semibold text-gray-900 mb-3">
                   {value.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {value.description}
                 </p>
               </div>
