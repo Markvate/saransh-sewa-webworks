@@ -109,11 +109,11 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
           <div className="flex flex-col">
+            <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
+              Contact Information
+            </h3>
+            
             <div className="animate-slide-in-left flex-grow flex flex-col">
-              <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
-                Contact Information
-              </h3>
-              
               <div className="grid grid-cols-1 gap-6 flex-grow">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-200 border-0 bg-white">
@@ -170,7 +170,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form - adjusted to match alignment */}
+          {/* Contact Form - aligned to start at same position as Contact Information */}
           <div className="flex flex-col h-full">
             <Card className="py-8 px-8 border-0 shadow-lg flex-grow flex flex-col">
               <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
