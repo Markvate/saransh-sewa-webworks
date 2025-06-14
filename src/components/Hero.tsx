@@ -85,7 +85,7 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+              className="bg-orange-500/20 backdrop-blur-sm border-2 border-orange-400 text-white hover:bg-orange-500 hover:border-orange-500 px-10 py-4 rounded-full font-bold text-xl transition-all duration-200 transform hover:scale-110 shadow-lg hover:shadow-xl"
             >
               और जानें • Learn More
             </Button>
