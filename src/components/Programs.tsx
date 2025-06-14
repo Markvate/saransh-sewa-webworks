@@ -1,7 +1,10 @@
 import { GraduationCap, Heart, Users, Leaf, Briefcase, Home, Utensils } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 const Programs = () => {
+  const navigate = useNavigate();
+
   const programs = [
     {
       icon: Utensils,
@@ -144,7 +147,10 @@ const Programs = () => {
               <button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105">
                 अभी स्वयंसेवक बनें • Volunteer Now
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105">
+              <button 
+                onClick={() => navigate('/donate')}
+                className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+              >
                 भोजन सेवा में योगदान • Support Food Service
               </button>
             </div>
