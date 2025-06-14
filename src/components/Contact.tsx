@@ -63,22 +63,28 @@ const Contact = () => {
                 Contact Information
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-200 border-0 bg-white">
                     <div className="flex items-start space-x-4">
                       <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-lg shrink-0">
                         <info.icon className="h-6 w-6 text-white" />
                       </div>
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-600 mb-1">
+                          <p key={detailIndex} className="text-gray-600 mb-1 break-words">
                             {info.title.includes('Leadership') && detail.includes(':') ? (
                               <>
                                 {detail.split(':')[0]}: <a href={`tel:${detail.split(':')[1].trim().replace(' ', '')}`} className="text-orange-600 hover:text-orange-700 font-semibold">{detail.split(':')[1].trim()}</a>
                               </>
-                            ) : detail}
+                            ) : (
+                              info.title === 'Email' ? (
+                                <a href={`mailto:${detail}`} className="text-orange-600 hover:text-orange-700 font-semibold break-all">
+                                  {detail}
+                                </a>
+                              ) : detail
+                            )}
                           </p>
                         ))}
                         <p className="text-sm text-gray-500 mt-2">{info.description}</p>
