@@ -1,5 +1,5 @@
 
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -34,9 +34,13 @@ const Footer = () => {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Organization Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-                <Heart className="h-6 w-6 text-white" />
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 relative">
+                <img 
+                  src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
+                  alt="Saransh Sewa Trust Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-poppins font-bold">
                 Saransh Sewa Trust
