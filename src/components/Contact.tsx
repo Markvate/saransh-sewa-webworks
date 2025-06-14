@@ -7,9 +7,12 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      details: ['+91 XXXXX XXXXX', '+91 XXXXX XXXXX'],
-      description: 'Call us during business hours'
+      title: 'Leadership Contact • नेतृत्व संपर्क',
+      details: [
+        'Karan Shukla - Founder/संस्थापक: 9415607400',
+        'Pandit Sudhanshu Tiwari Ji - President/अध्यक्ष: 9005804713'
+      ],
+      description: 'Reach out to our leadership team directly'
     },
     {
       icon: Mail,
@@ -70,7 +73,13 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
                         {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-600 mb-1">{detail}</p>
+                          <p key={detailIndex} className="text-gray-600 mb-1">
+                            {info.title.includes('Leadership') && detail.includes(':') ? (
+                              <>
+                                {detail.split(':')[0]}: <a href={`tel:+91${detail.split(':')[1].trim()}`} className="text-orange-600 hover:text-orange-700 font-semibold">{detail.split(':')[1].trim()}</a>
+                              </>
+                            ) : detail}
+                          </p>
                         ))}
                         <p className="text-sm text-gray-500 mt-2">{info.description}</p>
                       </div>
