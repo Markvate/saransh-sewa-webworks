@@ -105,10 +105,10 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Align both grid columns by using items-stretch and flex/fill in children */}
+        {/* Main content grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col">
             <div className="animate-slide-in-left flex-grow flex flex-col">
               <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
                 Contact Information
@@ -170,15 +170,15 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form - make smaller to align with contact info */}
-          <div className="flex flex-col">
-            <Card className="py-6 px-8 border-0 shadow-lg">
-              <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-6">
+          {/* Contact Form - adjusted to match alignment */}
+          <div className="flex flex-col h-full">
+            <Card className="py-8 px-8 border-0 shadow-lg flex-grow flex flex-col">
+              <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
                 Send us a Message
               </h3>
               
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form className="space-y-6 flex-grow flex flex-col">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       First Name
@@ -235,24 +235,26 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <div>
+                <div className="flex-grow flex flex-col">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none"
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none flex-grow"
                     placeholder="Tell us how you'd like to get involved or support our cause..."
                   ></textarea>
                 </div>
 
-                <Button 
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 mt-6"
-                >
-                  Send Message
-                  <Send className="ml-2 h-4 w-4" />
-                </Button>
+                <div className="mt-auto">
+                  <Button 
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
+                  >
+                    Send Message
+                    <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
               </form>
             </Card>
           </div>
