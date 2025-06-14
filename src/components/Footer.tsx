@@ -21,9 +21,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, name: 'Facebook', href: '#' },
+    { icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/p/Saransh-Sewa-Trust-61555761001064/' },
     { icon: Twitter, name: 'Twitter', href: '#' },
-    { icon: Instagram, name: 'Instagram', href: '#' },
+    { icon: Instagram, name: 'Instagram', href: 'https://www.instagram.com/saranshsewatrust/' },
     { icon: Linkedin, name: 'LinkedIn', href: '#' }
   ];
 
@@ -152,6 +152,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-600 p-2 rounded-full transition-all duration-200 transform hover:scale-110"
                   title={social.name}
                 >

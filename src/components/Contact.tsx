@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -34,9 +35,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, name: 'Facebook', href: '#' },
+    { icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/p/Saransh-Sewa-Trust-61555761001064/' },
     { icon: Twitter, name: 'Twitter', href: '#' },
-    { icon: Instagram, name: 'Instagram', href: '#' },
+    { icon: Instagram, name: 'Instagram', href: 'https://www.instagram.com/saranshsewatrust/' },
     { icon: Linkedin, name: 'LinkedIn', href: '#' }
   ];
 
@@ -98,6 +99,8 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-full text-white hover:from-orange-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-110"
                   >
                     <social.icon className="h-5 w-5" />
