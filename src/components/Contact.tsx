@@ -2,6 +2,7 @@
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Contact = () => {
   const contactInfo = [
@@ -34,6 +35,23 @@ const Contact = () => {
     }
   ];
 
+  const leadershipTeam = [
+    {
+      name: 'Pandit Sudhanshu Tiwari Ji',
+      role: 'President • अध्यक्ष',
+      phone: '+91 9005804713',
+      image: '/lovable-uploads/e0b7b0af-4a7c-4a98-bb3b-b7e8a2311808.png',
+      initials: 'ST'
+    },
+    {
+      name: 'Karan Shukla',
+      role: 'Founder • संस्थापक',
+      phone: '+91 9415607400',
+      image: '/lovable-uploads/2b7a2dc2-269e-4372-8e71-0be700a588eb.png',
+      initials: 'KS'
+    }
+  ];
+
   const socialLinks = [
     { icon: Facebook, name: 'Facebook', href: 'https://www.facebook.com/p/Saransh-Sewa-Trust-61555761001064/' },
     { icon: Twitter, name: 'Twitter', href: '#' },
@@ -53,6 +71,38 @@ const Contact = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to make a difference? Contact us to learn how you can get involved or support our mission
           </p>
+        </div>
+
+        {/* Leadership Team Section */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-poppins font-semibold text-gray-900 text-center mb-8">
+            Our Leadership Team • हमारी नेतृत्व टीम
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {leadershipTeam.map((leader, index) => (
+              <Card key={index} className="p-6 text-center hover:shadow-lg transition-all duration-300 border-0 bg-white transform hover:scale-105">
+                <div className="flex flex-col items-center space-y-4">
+                  <Avatar className="w-24 h-24 border-4 border-orange-200">
+                    <AvatarImage src={leader.image} alt={leader.name} className="object-cover" />
+                    <AvatarFallback className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold">
+                      {leader.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h4 className="font-bold text-xl text-gray-900 mb-1">{leader.name}</h4>
+                    <p className="text-orange-600 font-semibold mb-3">{leader.role}</p>
+                    <a 
+                      href={`tel:${leader.phone.replace(' ', '')}`} 
+                      className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-200 transform hover:scale-105"
+                    >
+                      <Phone className="h-4 w-4 mr-2" />
+                      {leader.phone}
+                    </a>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
