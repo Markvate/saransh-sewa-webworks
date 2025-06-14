@@ -40,7 +40,7 @@ const Contact = () => {
       name: 'Pandit Sudhanshu Tiwari Ji',
       role: 'President • अध्यक्ष',
       phone: '+91 9005804713',
-      image: '/lovable-uploads/e0b7b0af-4a7c-4a98-bb3b-b7e8a2311808.png',
+      image: '/lovable-uploads/d0b6793d-ab49-4f0c-b75d-a72c2df9d156.png',
       initials: 'ST'
     },
     {
