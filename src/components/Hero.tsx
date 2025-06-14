@@ -1,7 +1,7 @@
-
 import { ArrowRight, Heart, Users, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import MembershipModal from '@/components/MembershipModal';
 
 const Hero = () => {
   return (
@@ -79,15 +79,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Link to="/donate">
-              <Button 
-                size="lg"
-                variant="outline"
-                className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-full font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                स्वयंसेवक बनें • Become a Volunteer
-              </Button>
-            </Link>
+            <MembershipModal />
           </div>
         </div>
       </div>
