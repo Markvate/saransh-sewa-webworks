@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ArrowLeft, Heart, Users, QrCode, CheckCircle } from 'lucide-react';
@@ -10,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -25,7 +25,7 @@ interface MembershipFormData {
 }
 
 const Donate = () => {
-  const { register, handleSubmit, formState: { errors }, watch, setValue } = useForm<MembershipFormData>();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<MembershipFormData>();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [volunteerAreas, setVolunteerAreas] = useState<string[]>([]);
@@ -58,13 +58,40 @@ const Donate = () => {
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "सदस्यता आवेदन सफल! • Membership Application Successful!",
-      description: "हम जल्द ही आपसे संपर्क करेंगे • We will contact you soon",
-    });
+    try {
+      // Insert data into Supabase
+      const { error } = await supabase
+        .from('membership_applications')
+        .insert({
+          full_name: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          address: data.address,
+          occupation: data.occupation || '',
+          motivation: data.motivation,
+          volunteer_areas: volunteerAreas
+        });
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+      
+      toast({
+        title: "सदस्यता आवेदन सफल! • Membership Application Successful!",
+        description: "हम जल्द ही आपसे संपर्क करेंगे • We will contact you soon",
+      });
+      
+      reset();
+      setVolunteerAreas([]);
+    } catch (error) {
+      console.error('Error submitting membership application:', error);
+      toast({
+        title: "त्रुटि • Error",
+        description: "कृपया बाद में पुनः प्रयास करें • Please try again later",
+        variant: "destructive"
+      });
+    }
     
     setIsSubmitting(false);
   };

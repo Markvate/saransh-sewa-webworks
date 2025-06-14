@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Users, CheckCircle } from 'lucide-react';
@@ -7,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import {
   Dialog,
   DialogContent,
@@ -63,24 +65,23 @@ const MembershipModal = () => {
     setIsSubmitting(true);
     
     try {
-      // Create form data for Google Form submission
-      const formData = new FormData();
-      
-      // Map form fields to Google Form entry IDs (you'll need to inspect your form to get these)
-      formData.append('entry.1234567890', data.fullName); // Replace with actual entry ID
-      formData.append('entry.0987654321', data.email); // Replace with actual entry ID
-      formData.append('entry.1111111111', data.phone); // Replace with actual entry ID
-      formData.append('entry.2222222222', data.address); // Replace with actual entry ID
-      formData.append('entry.3333333333', data.occupation); // Replace with actual entry ID
-      formData.append('entry.4444444444', data.motivation); // Replace with actual entry ID
-      formData.append('entry.5555555555', volunteerAreas.join(', ')); // Replace with actual entry ID
-      
-      // Submit to Google Form
-      await fetch('https://docs.google.com/forms/d/e/1FAIpQLScGGmtRUkDNJwpv5yifpsMfDveaFZN9nSiS22Uw6D2SluAFCQ/formResponse', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: formData
-      });
+      // Insert data into Supabase
+      const { error } = await supabase
+        .from('membership_applications')
+        .insert({
+          full_name: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          address: data.address,
+          occupation: data.occupation || '',
+          motivation: data.motivation,
+          volunteer_areas: volunteerAreas
+        });
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
       
       toast({
         title: "सदस्यता आवेदन सफल! • Membership Application Successful!",
@@ -91,6 +92,7 @@ const MembershipModal = () => {
       reset();
       setVolunteerAreas([]);
     } catch (error) {
+      console.error('Error submitting membership application:', error);
       toast({
         title: "त्रुटि • Error",
         description: "कृपया बाद में पुनः प्रयास करें • Please try again later",
