@@ -1,4 +1,3 @@
-
 import { ArrowRight, Heart, Users, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -39,9 +38,6 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            सरांश सेवा ट्रस्ट ग्रामीण समुदायों में शिक्षा, स्वास्थ्य सेवा और सतत विकास कार्यक्रमों के माध्यम से सकारात्मक बदलाव लाने के लिए समर्पित है।
-          </p>
           <p className="text-lg mb-8 text-gray-300 max-w-3xl mx-auto">
             Saransh Sewa Trust is dedicated to creating positive change in rural communities through education, healthcare, and sustainable development programs.
           </p>
