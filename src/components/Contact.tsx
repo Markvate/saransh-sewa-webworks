@@ -104,15 +104,16 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Align both grid columns by using items-stretch and flex/fill in children */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="animate-slide-in-left">
+          <div className="flex flex-col h-full">
+            <div className="animate-slide-in-left flex-grow flex flex-col">
               <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
                 Contact Information
               </h3>
               
-              <div className="grid grid-cols-1 gap-6">
+              <div className="grid grid-cols-1 gap-6 flex-grow">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-200 border-0 bg-white">
                     <div className="flex items-start space-x-4">
@@ -145,7 +146,7 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="bg-white p-8 rounded-2xl shadow-lg mt-8">
               <h4 className="text-2xl font-poppins font-semibold text-gray-900 mb-6">
                 Follow Us
               </h4>
@@ -168,14 +169,14 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="animate-fade-in">
-            <Card className="p-8 border-0 shadow-lg">
+          {/* Contact Form - match height to Contact Info section */}
+          <div className="flex flex-col h-full justify-stretch">
+            <Card className="p-8 border-0 shadow-lg flex flex-col h-full justify-between">
               <h3 className="text-3xl font-poppins font-semibold text-gray-900 mb-8">
                 Send us a Message
               </h3>
               
-              <form className="space-y-6">
+              <form className="space-y-6 flex flex-col flex-grow">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -233,13 +234,13 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <div>
+                <div className="flex-grow flex flex-col">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none flex-grow"
                     placeholder="Tell us how you'd like to get involved or support our cause..."
                   ></textarea>
                 </div>
