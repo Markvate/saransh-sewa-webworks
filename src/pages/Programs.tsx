@@ -14,7 +14,11 @@ const ProgramsPage = () => {
     <div className="min-h-screen">
       <Header />
       <div className="pt-20">
-        <Programs />
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl bg-white/70 backdrop-blur-[2px] border border-orange-100 shadow-lg rounded-2xl p-6 sm:p-10">
+            <Programs />
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
