@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Heart, QrCode, Copy } from 'lucide-react';
+import { ArrowLeft, Heart, Copy, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,6 +22,22 @@ const Donate = () => {
       toast({
         title: "कॉपी किया गया! • Copied!",
         description: "UPI ID आपके क्लिपबोर्ड में कॉपी हो गई है • UPI ID copied to clipboard",
+      });
+    } catch (err) {
+      toast({
+        title: "त्रुटि • Error",
+        description: "कॉपी नहीं हो सका • Could not copy to clipboard",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const copyPhoneNumber = async () => {
+    try {
+      await navigator.clipboard.writeText('+91 9876543210');
+      toast({
+        title: "कॉपी किया गया! • Copied!",
+        description: "फोन नंबर कॉपी हो गया • Phone number copied to clipboard",
       });
     } catch (err) {
       toast({
@@ -78,7 +95,11 @@ const Donate = () => {
                   <div className="space-y-6">
                     <div className="text-center">
                       <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
-                        <QrCode className="h-32 w-32 sm:h-48 sm:w-48 mx-auto text-gray-800 mb-4" />
+                        <img 
+                          src="/lovable-uploads/4f573f89-0673-4a9c-bf46-1ba9ca2d1bc2.png" 
+                          alt="QR Code for Donation" 
+                          className="h-32 w-32 sm:h-48 sm:w-48 mx-auto mb-4"
+                        />
                         <p className="text-sm text-gray-600 font-medium">
                           QR कोड स्कैन करें • Scan QR Code to Donate
                         </p>
@@ -101,6 +122,32 @@ const Donate = () => {
                           >
                             <Copy className="h-4 w-4" />
                           </Button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Payment Issue Contact */}
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                      <div className="flex items-start space-x-3">
+                        <Phone className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div className="flex-1">
+                          <p className="text-sm text-blue-800 font-medium mb-2">
+                            भुगतान में समस्या? • Having payment issues?
+                          </p>
+                          <p className="text-sm text-blue-700 mb-2">
+                            कृपया हमसे संपर्क करें • Please feel free to contact us
+                          </p>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-mono text-blue-800">+91 9876543210</span>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={copyPhoneNumber}
+                              className="h-6 w-6 p-0 hover:bg-blue-100 flex-shrink-0"
+                            >
+                              <Copy className="h-3 w-3" />
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
