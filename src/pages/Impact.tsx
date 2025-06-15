@@ -11,20 +11,10 @@ const ImpactPage = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Lighter Background Image */}
-      <div className="fixed inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=1500&q=80"
-          alt="Impact Background"
-          className="w-full h-full object-cover brightness-110"
-        />
-        {/* Light translucent overlay */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
-      </div>
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <div className="pt-20 flex-1 flex items-start justify-center">
-          <div className="w-full max-w-6xl mx-auto bg-white/70 rounded-xl shadow-xl backdrop-blur-lg p-2 sm:p-4 md:p-8 mt-6 mb-8">
+          <div className="w-full max-w-6xl mx-auto rounded-xl shadow-xl p-2 sm:p-4 md:p-8 mt-6 mb-8 bg-white">
             <Impact />
           </div>
         </div>

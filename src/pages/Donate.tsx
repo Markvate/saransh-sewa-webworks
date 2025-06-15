@@ -10,7 +10,6 @@ import Footer from '@/components/Footer';
 const Donate = () => {
   const { toast } = useToast();
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -49,20 +48,10 @@ const Donate = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Lighter Background Image */}
-      <div className="fixed inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=1500&q=80"
-          alt="Donate Background"
-          className="w-full h-full object-cover brightness-110"
-        />
-        {/* Light translucent overlay */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
-      </div>
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
         <div className="pt-24 pb-16 flex-1 flex items-start justify-center">
-          <div className="w-full max-w-4xl mx-auto bg-white/70 rounded-xl shadow-xl backdrop-blur-lg p-4 sm:p-8 mt-6 mb-8">
+          <div className="w-full max-w-4xl mx-auto rounded-xl shadow-xl p-4 sm:p-8 mt-6 mb-8 bg-white">
             {/* Back Navigation */}
             <div className="mb-8">
               <Link 
