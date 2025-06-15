@@ -91,7 +91,7 @@ const Donate = () => {
               </CardHeader>
               <CardContent className="p-4 sm:p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Left Side - QR Code and UPI ID */}
+                  {/* Left Side - QR Code, UPI ID, and Contact */}
                   <div className="space-y-6">
                     <div className="text-center">
                       <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
