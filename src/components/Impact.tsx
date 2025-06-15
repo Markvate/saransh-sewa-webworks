@@ -166,21 +166,21 @@ const Impact = () => {
               <p className="text-gray-300 text-sm">
                 "Thanks to Saransh Sewa Trust, I could complete my studies and now I'm pursuing engineering."
               </p>
-              <div className="text-xs text-gray-400 mt-2">- Priya, Beneficiary</div>
+              <div className="text-xs text-gray-400 mt-2">- Ashween Singh, Beneficiary</div>
             </div>
             <div className="bg-black/30 rounded-lg p-6">
               <div className="text-2xl font-bold text-orange-400 mb-2">Healthcare</div>
               <p className="text-gray-300 text-sm">
                 "The mobile health clinic saved my mother's life when she needed emergency care."
               </p>
-              <div className="text-xs text-gray-400 mt-2">- Rajesh, Village Resident</div>
+              <div className="text-xs text-gray-400 mt-2">- Anshuman, Village Resident</div>
             </div>
             <div className="bg-black/30 rounded-lg p-6">
               <div className="text-2xl font-bold text-orange-400 mb-2">Empowerment</div>
               <p className="text-gray-300 text-sm">
                 "The skill training program helped me start my own tailoring business."
               </p>
-              <div className="text-xs text-gray-400 mt-2">- Sunita, Entrepreneur</div>
+              <div className="text-xs text-gray-400 mt-2">- Anushka, Entrepreneur</div>
             </div>
           </div>
         </div>
@@ -190,3 +190,4 @@ const Impact = () => {
 };
 
 export default Impact;
+
