@@ -14,14 +14,15 @@ const NotFound = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
+      {/* Lighter Background Image */}
       <div className="fixed inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1500&q=80"
+          src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=1500&q=80"
           alt="Not Found Background"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover brightness-110"
         />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        {/* Light translucent overlay */}
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
       </div>
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="bg-white/70 rounded-xl shadow-xl backdrop-blur-lg p-8 text-center">

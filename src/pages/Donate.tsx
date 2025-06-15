@@ -49,14 +49,15 @@ const Donate = () => {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
+      {/* Lighter Background Image */}
       <div className="fixed inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=1500&q=80"
           alt="Donate Background"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full h-full object-cover brightness-110"
         />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        {/* Light translucent overlay */}
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
       </div>
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header />
