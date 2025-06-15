@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Heart, QrCode, Copy } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -61,7 +60,7 @@ const Donate = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Donation Section */}
             <Card className="border-2 border-orange-200 shadow-lg">
               <CardHeader className="text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-t-lg">
@@ -74,21 +73,20 @@ const Donate = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-8">
-                <div className="text-center space-y-6">
-                  <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
-                    <QrCode className="h-32 w-32 sm:h-48 sm:w-48 mx-auto text-gray-800 mb-4" />
-                    <p className="text-sm text-gray-600 font-medium">
-                      QR कोड स्कैन करें • Scan QR Code to Donate
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      दान के तरीके • Payment Methods
-                    </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Left Side - QR Code and UPI ID */}
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
+                        <QrCode className="h-32 w-32 sm:h-48 sm:w-48 mx-auto text-gray-800 mb-4" />
+                        <p className="text-sm text-gray-600 font-medium">
+                          QR कोड स्कैन करें • Scan QR Code to Donate
+                        </p>
+                      </div>
+                    </div>
                     
                     {/* UPI ID Section */}
-                    <div className="bg-orange-50 rounded-lg p-4 text-left">
+                    <div className="bg-orange-50 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 mb-2">UPI ID</h4>
                       <div className="bg-white rounded p-3 border border-orange-200">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -106,27 +104,41 @@ const Donate = () => {
                         </div>
                       </div>
                     </div>
-                    
-                    {/* Bank Details Section */}
-                    <div className="bg-gray-50 rounded-lg p-4 text-left">
-                      <h4 className="font-semibold text-gray-900 mb-2">बैंक विवरण • Bank Details</h4>
-                      <div className="space-y-2 text-sm">
-                        <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
-                        <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
-                        <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
-                        <p><strong>Bank:</strong> State Bank of India</p>
-                        <p><strong>Branch:</strong> Sultanpur, UP</p>
-                      </div>
-                    </div>
                   </div>
 
-                  <div className="bg-orange-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-700">
-                      <strong>नोट:</strong> दान के बाद कृपया अपनी रसीद 
-                      <a href="mailto:donations@saranshsewatrust.org" className="text-orange-600 hover:underline ml-1">
-                        donations@saranshsewatrust.org
-                      </a> पर भेजें
-                    </p>
+                  {/* Right Side - Bank Details */}
+                  <div className="space-y-6">
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-900 mb-4 text-center lg:text-left">
+                        बैंक विवरण • Bank Details
+                      </h4>
+                      <div className="space-y-3 text-sm">
+                        <div className="bg-white rounded p-3 border border-gray-200">
+                          <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
+                        </div>
+                        <div className="bg-white rounded p-3 border border-gray-200">
+                          <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
+                        </div>
+                        <div className="bg-white rounded p-3 border border-gray-200">
+                          <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
+                        </div>
+                        <div className="bg-white rounded p-3 border border-gray-200">
+                          <p><strong>Bank:</strong> State Bank of India</p>
+                        </div>
+                        <div className="bg-white rounded p-3 border border-gray-200">
+                          <p><strong>Branch:</strong> Sultanpur, UP</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-orange-50 rounded-lg p-4">
+                      <p className="text-sm text-gray-700">
+                        <strong>नोट:</strong> दान के बाद कृपया अपनी रसीद 
+                        <a href="mailto:donations@saranshsewatrust.org" className="text-orange-600 hover:underline ml-1">
+                          donations@saranshsewatrust.org
+                        </a> पर भेजें
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
