@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Heart, Copy, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -50,7 +51,7 @@ const Donate = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
       <Header />
-      
+
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Back Navigation */}
@@ -90,7 +91,7 @@ const Donate = () => {
               </CardHeader>
               <CardContent className="p-4 sm:p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Left Side - QR Code, UPI ID, and Contact */}
+                  {/* Left Side - QR Code, UPI ID, and Hindi Payment Issues */}
                   <div className="space-y-6">
                     <div className="text-center">
                       <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
@@ -125,68 +126,36 @@ const Donate = () => {
                       </div>
                     </div>
 
-                    {/* Payment Issue Contact Section: 2-sided (Hindi/English) */}
+                    {/* Hindi Payment Issue Contact (LEFT) */}
                     <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                      <div className="flex flex-col sm:flex-row">
-                        {/* Hindi Side */}
-                        <div className="flex-1 flex flex-col items-start border-b sm:border-b-0 sm:border-r border-blue-200 pr-0 sm:pr-4 mb-4 sm:mb-0">
-                          <div className="flex items-start space-x-2">
-                            <Phone className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <div>
-                              <p className="text-sm text-blue-800 font-medium mb-2">
-                                भुगतान में समस्या?
-                              </p>
-                              <p className="text-sm text-blue-700 mb-2">
-                                कृपया हमसे संपर्क करें
-                              </p>
-                              <div className="flex items-center space-x-2">
-                                <span className="text-sm font-mono text-blue-800">
-                                  +91 9876543210
-                                </span>
-                                <Button
-                                  variant="outline"
-                                  size="sm"
-                                  onClick={copyPhoneNumber}
-                                  className="h-6 w-6 p-0 hover:bg-blue-100 flex-shrink-0"
-                                >
-                                  <Copy className="h-3 w-3" />
-                                </Button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* English Side */}
-                        <div className="flex-1 flex flex-col items-start sm:pl-4">
-                          <div className="flex items-start space-x-2">
-                            <Phone className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                            <div>
-                              <p className="text-sm text-blue-800 font-medium mb-2">
-                                Having payment issues?
-                              </p>
-                              <p className="text-sm text-blue-700 mb-2">
-                                Please feel free to contact us
-                              </p>
-                              <div className="flex items-center space-x-2">
-                                <span className="text-sm font-mono text-blue-800">
-                                  +91 9876543210
-                                </span>
-                                <Button
-                                  variant="outline"
-                                  size="sm"
-                                  onClick={copyPhoneNumber}
-                                  className="h-6 w-6 p-0 hover:bg-blue-100 flex-shrink-0"
-                                >
-                                  <Copy className="h-3 w-3" />
-                                </Button>
-                              </div>
-                            </div>
+                      <div className="flex items-start space-x-2">
+                        <Phone className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-blue-800 font-medium mb-2">
+                            भुगतान में समस्या?
+                          </p>
+                          <p className="text-sm text-blue-700 mb-2">
+                            कृपया हमसे संपर्क करें
+                          </p>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-mono text-blue-800">
+                              +91 9876543210
+                            </span>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={copyPhoneNumber}
+                              className="h-6 w-6 p-0 hover:bg-blue-100 flex-shrink-0"
+                            >
+                              <Copy className="h-3 w-3" />
+                            </Button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right Side - Bank Details */}
+                  {/* Right Side - Bank Details & English Payment Issues */}
                   <div className="space-y-6">
                     <div className="bg-gray-50 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 mb-4 text-center lg:text-left">
@@ -207,6 +176,34 @@ const Donate = () => {
                         </div>
                         <div className="bg-white rounded p-3 border border-gray-200">
                           <p><strong>Branch:</strong> Sultanpur, UP</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* English Payment Issue Contact (RIGHT) */}
+                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                      <div className="flex items-start space-x-2">
+                        <Phone className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-blue-800 font-medium mb-2">
+                            Having payment issues?
+                          </p>
+                          <p className="text-sm text-blue-700 mb-2">
+                            Please feel free to contact us
+                          </p>
+                          <div className="flex items-center space-x-2">
+                            <span className="text-sm font-mono text-blue-800">
+                              +91 9876543210
+                            </span>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={copyPhoneNumber}
+                              className="h-6 w-6 p-0 hover:bg-blue-100 flex-shrink-0"
+                            >
+                              <Copy className="h-3 w-3" />
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
