@@ -39,7 +39,7 @@ const Header = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-base sm:text-xl font-poppins font-bold text-gray-900 hidden xs:block">
+            <span className="text-base sm:text-xl font-poppins font-bold text-gray-900">
               Saransh Sewa Trust
             </span>
           </Link>
