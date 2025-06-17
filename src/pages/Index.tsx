@@ -7,11 +7,15 @@ import Programs from '@/components/Programs';
 import Impact from '@/components/Impact';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 const Index = () => {
-  // Scroll to top when component mounts
+  const { trackPageView } = useAnalytics();
+
+  // Scroll to top when component mounts and track page view
   useEffect(() => {
     window.scrollTo(0, 0);
+    trackPageView('/');
   }, []);
 
   return (

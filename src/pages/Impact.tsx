@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Impact from '@/components/Impact';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 const ImpactPage = () => {
+  const { trackPageView } = useAnalytics();
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    trackPageView('/impact');
   }, []);
 
   return (

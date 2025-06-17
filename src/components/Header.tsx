@@ -1,12 +1,16 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { user, isAdmin, signOut } = useAuth();
+  const { trackButtonClick, trackPageView } = useAnalytics();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,16 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const handleLinkClick = (linkName: string, href: string) => {
+    trackButtonClick(linkName, window.location.pathname);
+    trackPageView(href);
+  };
+
+  const handleSignOut = async () => {
+    trackButtonClick('sign-out', window.location.pathname);
+    await signOut();
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -31,7 +45,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0"
+            onClick={() => handleLinkClick('logo', '/')}
+          >
             <div className="w-8 h-8 sm:w-12 sm:h-12 relative">
               <img 
                 src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
@@ -50,13 +68,46 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => handleLinkClick(item.name.toLowerCase(), item.href)}
                 className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200 relative group text-sm xl:text-base"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
-            <Link to="/donate">
+            
+            {/* Auth Section */}
+            {user ? (
+              <div className="flex items-center space-x-4">
+                {isAdmin && (
+                  <Link 
+                    to="/admin"
+                    onClick={() => handleLinkClick('admin', '/admin')}
+                    className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200"
+                  >
+                    Admin
+                  </Link>
+                )}
+                <Button
+                  onClick={handleSignOut}
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center space-x-2"
+                >
+                  <LogOut className="h-4 w-4" />
+                  <span>Sign Out</span>
+                </Button>
+              </div>
+            ) : (
+              <Link to="/auth" onClick={() => handleLinkClick('sign-in', '/auth')}>
+                <Button variant="outline" size="sm" className="flex items-center space-x-2">
+                  <User className="h-4 w-4" />
+                  <span>Sign In</span>
+                </Button>
+              </Link>
+            )}
+            
+            <Link to="/donate" onClick={() => handleLinkClick('donate', '/donate')}>
               <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 xl:px-6 xl:py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm xl:text-base">
                 Donate Now
               </Button>
@@ -82,13 +133,61 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    handleLinkClick(item.name.toLowerCase(), item.href);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Auth Section */}
+              {user ? (
+                <>
+                  {isAdmin && (
+                    <Link
+                      to="/admin"
+                      className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
+                      onClick={() => {
+                        handleLinkClick('admin', '/admin');
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      Admin Dashboard
+                    </Link>
+                  )}
+                  <button
+                    onClick={() => {
+                      handleSignOut();
+                      setIsMenuOpen(false);
+                    }}
+                    className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100 text-left"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/auth"
+                  className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
+                  onClick={() => {
+                    handleLinkClick('sign-in', '/auth');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Sign In
+                </Link>
+              )}
+              
               <div className="px-4 pt-2">
-                <Link to="/donate" onClick={() => setIsMenuOpen(false)}>
+                <Link 
+                  to="/donate" 
+                  onClick={() => {
+                    handleLinkClick('donate', '/donate');
+                    setIsMenuOpen(false);
+                  }}
+                >
                   <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-full font-medium">
                     Donate Now
                   </Button>

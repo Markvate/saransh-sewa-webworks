@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import About from '@/components/About';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 const AboutPage = () => {
+  const { trackPageView } = useAnalytics();
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    trackPageView('/about');
   }, []);
 
   return (
