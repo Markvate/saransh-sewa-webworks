@@ -44,23 +44,58 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0"
-            onClick={() => handleLinkClick('logo', '/')}
-          >
-            <div className="w-8 h-8 sm:w-12 sm:h-12 relative">
-              <img 
-                src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
-                alt="Saransh Sewa Trust Logo" 
-                className="w-full h-full object-contain"
-              />
+          {/* Logo with integrated auth */}
+          <div className="flex items-center space-x-3 sm:space-x-4 flex-shrink-0">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-2 sm:space-x-3"
+              onClick={() => handleLinkClick('logo', '/')}
+            >
+              <div className="w-8 h-8 sm:w-12 sm:h-12 relative">
+                <img 
+                  src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
+                  alt="Saransh Sewa Trust Logo" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <span className="text-base sm:text-xl font-poppins font-bold text-gray-900">
+                Saransh Sewa Trust
+              </span>
+            </Link>
+            
+            {/* Auth integrated with logo */}
+            <div className="flex items-center space-x-2">
+              {user ? (
+                <div className="flex items-center space-x-2">
+                  {isAdmin && (
+                    <Link 
+                      to="/admin"
+                      onClick={() => handleLinkClick('admin', '/admin')}
+                      className="text-xs sm:text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors duration-200 hidden sm:block"
+                    >
+                      Admin
+                    </Link>
+                  )}
+                  <Button
+                    onClick={handleSignOut}
+                    variant="ghost"
+                    size="sm"
+                    className="flex items-center space-x-1 text-xs sm:text-sm h-8 px-2"
+                  >
+                    <LogOut className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Sign Out</span>
+                  </Button>
+                </div>
+              ) : (
+                <Link to="/auth" onClick={() => handleLinkClick('sign-in', '/auth')}>
+                  <Button variant="ghost" size="sm" className="flex items-center space-x-1 text-xs sm:text-sm h-8 px-2">
+                    <User className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Sign In</span>
+                  </Button>
+                </Link>
+              )}
             </div>
-            <span className="text-base sm:text-xl font-poppins font-bold text-gray-900">
-              Saransh Sewa Trust
-            </span>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -75,37 +110,6 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
-            
-            {/* Auth Section */}
-            {user ? (
-              <div className="flex items-center space-x-4">
-                {isAdmin && (
-                  <Link 
-                    to="/admin"
-                    onClick={() => handleLinkClick('admin', '/admin')}
-                    className="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200"
-                  >
-                    Admin
-                  </Link>
-                )}
-                <Button
-                  onClick={handleSignOut}
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center space-x-2"
-                >
-                  <LogOut className="h-4 w-4" />
-                  <span>Sign Out</span>
-                </Button>
-              </div>
-            ) : (
-              <Link to="/auth" onClick={() => handleLinkClick('sign-in', '/auth')}>
-                <Button variant="outline" size="sm" className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span>Sign In</span>
-                </Button>
-              </Link>
-            )}
             
             <Link to="/donate" onClick={() => handleLinkClick('donate', '/donate')}>
               <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 xl:px-6 xl:py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm xl:text-base">
