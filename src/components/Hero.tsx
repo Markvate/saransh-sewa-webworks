@@ -33,7 +33,7 @@ const Hero = () => {
           {/* Main heading */}
           <div className="space-y-3 sm:space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
-              सेवा ही संकल्प,
+              सारांश सेवा ट्रस्ट,
               <span className="block text-orange-300">जीवन को बदलना</span>
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold opacity-90 text-orange-100">
