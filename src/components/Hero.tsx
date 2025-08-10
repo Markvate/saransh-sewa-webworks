@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="space-y-3 sm:space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
               सारांश सेवा ट्रस्ट,
-              <span className="block text-orange-300">सेवा ही संकल्प</span>
+              <span className="block text-orange-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-orange-500/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-orange-400/30">सेवा ही संकल्प</span>
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold opacity-90 text-orange-100">
               Service is our pledge, Transforming Lives
