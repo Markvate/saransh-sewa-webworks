@@ -15,7 +15,7 @@ const Contact = () => {
       title: 'Leadership Contact • नेतृत्व संपर्क',
       details: [
         'Karan Shukla - Founder/संस्थापक: +91 9415607400',
-        'Pandit Sudhanshu Tiwari Ji - President/अध्यक्ष: +91 9005804713'
+        'Pandit Sudhanshu Tiwari Ji - President/अध्यक्ष: +91 9005804317'
       ],
       description: 'Reach out to our leadership team directly'
     },
@@ -50,7 +50,7 @@ const Contact = () => {
     {
       name: 'Pandit Sudhanshu Tiwari Ji',
       role: 'President • अध्यक्ष',
-      phone: '+91 9005804713',
+      phone: '+91 9005804317',
       image: '/lovable-uploads/d0b6793d-ab49-4f0c-b75d-a72c2df9d156.png',
       initials: 'ST'
     }
