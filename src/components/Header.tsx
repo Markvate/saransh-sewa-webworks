@@ -53,7 +53,7 @@ const Header = () => {
             >
               <div className="w-8 h-8 sm:w-12 sm:h-12 relative">
                 <img 
-                  src="/lovable-uploads/7a9d422f-d8a9-484f-b62e-8c238a77d1f4.png" 
+                  src="/lovable-uploads/9a11ab3d-47e9-4052-89d0-574ed2958cfd.png" 
                   alt="Saransh Sewa Trust Logo" 
                   className="w-full h-full object-contain"
                 />
