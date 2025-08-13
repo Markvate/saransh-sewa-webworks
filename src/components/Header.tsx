@@ -68,13 +68,29 @@ const Header = () => {
               {user ? (
                 <div className="flex items-center space-x-2">
                   {isAdmin && (
-                    <Link 
-                      to="/admin"
-                      onClick={() => handleLinkClick('admin', '/admin')}
-                      className="text-xs sm:text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors duration-200 hidden sm:block"
-                    >
-                      Admin
-                    </Link>
+                    <>
+                      <Link 
+                        to="/admin"
+                        onClick={() => handleLinkClick('admin', '/admin')}
+                        className="text-xs sm:text-sm text-orange-600 hover:text-orange-700 font-medium transition-colors duration-200 hidden sm:block"
+                      >
+                        Admin
+                      </Link>
+                      <Link 
+                        to="/messages"
+                        onClick={() => handleLinkClick('messages', '/messages')}
+                        className="text-xs sm:text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 hidden sm:block"
+                      >
+                        Messages
+                      </Link>
+                      <Link 
+                        to="/mail"
+                        onClick={() => handleLinkClick('mail', '/mail')}
+                        className="text-xs sm:text-sm text-green-600 hover:text-green-700 font-medium transition-colors duration-200 hidden sm:block"
+                      >
+                        Mail
+                      </Link>
+                    </>
                   )}
                   <Button
                     onClick={handleSignOut}
@@ -150,16 +166,38 @@ const Header = () => {
               {user ? (
                 <>
                   {isAdmin && (
-                    <Link
-                      to="/admin"
-                      className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
-                      onClick={() => {
-                        handleLinkClick('admin', '/admin');
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      Admin Dashboard
-                    </Link>
+                    <>
+                      <Link
+                        to="/admin"
+                        className="text-gray-700 hover:text-orange-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
+                        onClick={() => {
+                          handleLinkClick('admin', '/admin');
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Admin Dashboard
+                      </Link>
+                      <Link
+                        to="/messages"
+                        className="text-gray-700 hover:text-blue-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
+                        onClick={() => {
+                          handleLinkClick('messages', '/messages');
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Messages
+                      </Link>
+                      <Link
+                        to="/mail"
+                        className="text-gray-700 hover:text-green-500 font-medium px-4 py-3 transition-colors duration-200 border-b border-gray-100"
+                        onClick={() => {
+                          handleLinkClick('mail', '/mail');
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Mail System
+                      </Link>
+                    </>
                   )}
                   <button
                     onClick={() => {
