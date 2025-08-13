@@ -32,7 +32,7 @@ const Donate = () => {
 
   const copyPhoneNumber = async () => {
     try {
-      await navigator.clipboard.writeText('+91 9876543210');
+      await navigator.clipboard.writeText('+91 9415607400');
       toast({
         title: "कॉपी किया गया! • Copied!",
         description: "फोन नंबर कॉपी हो गया • Phone number copied to clipboard",
@@ -171,10 +171,10 @@ const Donate = () => {
                         <p className="text-sm text-blue-700 mb-2">
                           कृपया हमसे संपर्क करें
                         </p>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm font-mono text-blue-800">
-                            +91 9876543210
-                          </span>
+                         <div className="flex items-center space-x-2">
+                           <span className="text-sm font-mono text-blue-800">
+                             +91 9415607400
+                           </span>
                           <Button
                             variant="outline"
                             size="sm"
@@ -196,10 +196,10 @@ const Donate = () => {
                         <p className="text-sm text-blue-700 mb-2">
                           Please feel free to contact us
                         </p>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm font-mono text-blue-800">
-                            +91 9876543210
-                          </span>
+                         <div className="flex items-center space-x-2">
+                           <span className="text-sm font-mono text-blue-800">
+                             +91 9415607400
+                           </span>
                           <Button
                             variant="outline"
                             size="sm"
