@@ -142,7 +142,7 @@ const Donate = () => {
                             <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
-                            <p><strong>Bank:</strong> State Bank of India</p>
+                            <p><strong>Bank:</strong> Axis Bank</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
                             <p><strong>Branch:</strong> Sultanpur, UP</p>
