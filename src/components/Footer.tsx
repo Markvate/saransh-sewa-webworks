@@ -65,12 +65,12 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-orange-500" />
                 <div className="text-gray-300">
                   <div>Karan Shukla - Founder/संस्थापक: <a href="tel:+919415607400" className="hover:text-orange-500 transition-colors">+91 9415607400</a></div>
-                  <div className="mt-1">Pandit Sudhanshu Tiwari Ji - President/अध्यक्ष: <a href="tel:+919005804713" className="hover:text-orange-500 transition-colors">+91 9005804713</a></div>
+                  <div className="mt-1">Pandit Sudhanshu Tiwari Ji - President/अध्यक्ष: <a href="tel:+919005804317" className="hover:text-orange-500 transition-colors">+91 9005804317</a></div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange-500" />
-                <span className="text-gray-300">info@saranshsewatrust.org</span>
+                <span className="text-gray-300">info@saranshsewatrust.com</span>
               </div>
             </div>
           </div>

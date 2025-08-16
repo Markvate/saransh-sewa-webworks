@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@saranshsewatrust.org', 'contact@saranshsewatrust.org'],
+      details: ['info@saranshsewatrust.com', 'contact@saranshsewatrust.com'],
       description: 'Send us an email anytime'
     },
     {

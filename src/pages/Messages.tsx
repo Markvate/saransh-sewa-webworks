@@ -95,7 +95,7 @@ const MessagesPage = () => {
         .from('messages')
         .insert({
           sender_name: 'Saransh Sewa Trust Admin',
-          sender_email: 'admin@saranshsewatrust.org',
+          sender_email: 'admin@saranshsewatrust.com',
           recipient_email: selectedMessage.sender_email,
           subject: `Re: ${selectedMessage.subject}`,
           content: replyContent,
