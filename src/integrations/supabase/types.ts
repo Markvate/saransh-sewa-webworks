@@ -194,6 +194,30 @@ export type Database = {
         }
         Relationships: []
       }
+      simple_admin_auth: {
+        Row: {
+          created_at: string | null
+          id: string
+          is_active: boolean | null
+          password: string
+          username: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          is_active?: boolean | null
+          password?: string
+          username?: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          is_active?: boolean | null
+          password?: string
+          username?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -152,8 +152,8 @@ const Donate = () => {
                       <div className="bg-orange-50 rounded-lg p-4">
                         <p className="text-sm text-gray-700">
                           <strong>नोट:</strong> दान के बाद कृपया अपनी रसीद 
-                          <a href="mailto:donations@saranshsewatrust.org" className="text-orange-600 hover:underline ml-1">
-                            donations@saranshsewatrust.org
+                           <a href="mailto:donations@saranshsewatrust.com" className="text-orange-600 hover:underline ml-1">
+                             donations@saranshsewatrust.com
                           </a> पर भेजें
                         </p>
                       </div>
