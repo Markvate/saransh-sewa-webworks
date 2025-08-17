@@ -22,14 +22,11 @@ const AdminLogin = ({ onLogin }: AdminLoginProps) => {
     setLoading(true);
 
     try {
-      // Check credentials against our admin table
-      const { data, error } = await supabase
-        .from('simple_admin_auth')
-        .select('*')
-        .eq('username', username)
-        .eq('password', password)
-        .eq('is_active', true)
-        .single();
+      // Use secure function to authenticate admin
+      const { data, error } = await supabase.rpc('authenticate_admin', {
+        username_input: username,
+        password_input: password
+      });
 
       if (error || !data) {
         toast({
