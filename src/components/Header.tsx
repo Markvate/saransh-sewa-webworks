@@ -63,14 +63,6 @@ const Header = () => {
               </span>
             </Link>
             
-            {/* New Child Photo */}
-            <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
-              <img 
-                src="/lovable-uploads/5de881d6-10df-444c-a145-380dcbed1e93.png" 
-                alt="Child Photo" 
-                className="w-full h-full object-cover rounded-full border-2 border-orange-200"
-              />
-            </div>
             
             {/* Auth integrated with logo */}
             <div className="flex items-center space-x-2">
