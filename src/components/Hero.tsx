@@ -37,16 +37,6 @@ const Hero = () => {
               <span className="block text-orange-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-orange-500/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-orange-400/30">सेवा ही संकल्प</span>
             </h1>
             
-            {/* Child Photo below सेवा ही संकल्प */}
-            <div className="flex justify-center mt-4 sm:mt-6">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 relative">
-                <img 
-                  src="/lovable-uploads/5de881d6-10df-444c-a145-380dcbed1e93.png" 
-                  alt="Child Photo" 
-                  className="w-full h-full object-cover rounded-full border-3 border-orange-300/50 shadow-lg"
-                />
-              </div>
-            </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold opacity-90 text-orange-100">
               Saransh Sewa Trust, Service is our pledge
             </h2>
