@@ -29,6 +29,13 @@ const Gallery = () => {
   const { user } = useAuth();
 
   const isAdmin = user?.email === 'Saranshsewatrust@gmail.com';
+  
+  // Debug logging
+  console.log('Gallery Debug:', { 
+    userEmail: user?.email, 
+    isAdmin, 
+    userExists: !!user 
+  });
 
   useEffect(() => {
     fetchPhotos();
