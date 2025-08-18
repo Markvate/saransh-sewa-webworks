@@ -28,7 +28,7 @@ const Gallery = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const { user } = useAuth();
 
-  const isAdmin = user?.email === 'Admin@saranshsewatrust.com';
+  const isAdmin = user?.email === 'Saranshsewatrust@gmail.com';
 
   useEffect(() => {
     fetchPhotos();

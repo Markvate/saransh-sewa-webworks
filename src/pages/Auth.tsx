@@ -27,9 +27,18 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      const { error } = isLogin 
-        ? await signIn(email, password)
-        : await signUp(email, password);
+      // Only allow sign in, no sign up for public users
+      if (!isLogin) {
+        toast({
+          title: "Access Denied",
+          description: "Account creation is restricted. Please contact administrator.",
+          variant: "destructive",
+        });
+        setLoading(false);
+        return;
+      }
+
+      const { error } = await signIn(email, password);
 
       if (error) {
         toast({
@@ -40,11 +49,9 @@ const Auth = () => {
       } else {
         toast({
           title: "Success",
-          description: isLogin ? "Signed in successfully!" : "Check your email for verification link!",
+          description: "Signed in successfully!",
         });
-        if (isLogin) {
-          navigate('/');
-        }
+        navigate('/');
       }
     } catch (error) {
       toast({
@@ -61,9 +68,9 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>{isLogin ? 'Sign In' : 'Sign Up'}</CardTitle>
+          <CardTitle>Admin Sign In</CardTitle>
           <CardDescription>
-            {isLogin ? 'Welcome back!' : 'Create your account'}
+            Access restricted to authorized users only
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -87,18 +94,9 @@ const Auth = () => {
               />
             </div>
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Loading...' : (isLogin ? 'Sign In' : 'Sign Up')}
+              {loading ? 'Loading...' : 'Sign In'}
             </Button>
           </form>
-          <div className="mt-4 text-center">
-            <button
-              type="button"
-              onClick={() => setIsLogin(!isLogin)}
-              className="text-sm text-blue-600 hover:text-blue-500"
-            >
-              {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
-            </button>
-          </div>
         </CardContent>
       </Card>
     </div>

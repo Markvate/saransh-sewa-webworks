@@ -13,7 +13,7 @@ const AdminAuth = () => {
   const [loading, setLoading] = useState(false);
   const { user, signIn, signOut } = useAuth();
 
-  const isAdmin = user?.email === 'Admin@saranshsewatrust.com';
+  const isAdmin = user?.email === 'Saranshsewatrust@gmail.com';
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,7 +78,7 @@ const AdminAuth = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Admin@saranshsewatrust.com"
+              placeholder="Saranshsewatrust@gmail.com"
               required
             />
           </div>
