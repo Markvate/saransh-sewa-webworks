@@ -12,6 +12,7 @@ const Auth = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showAdminSetup, setShowAdminSetup] = useState(false);
   const { signIn, signUp, user } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -27,31 +28,48 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      // Only allow sign in, no sign up for public users
       if (!isLogin) {
-        toast({
-          title: "Access Denied",
-          description: "Account creation is restricted. Please contact administrator.",
-          variant: "destructive",
-        });
-        setLoading(false);
-        return;
-      }
-
-      const { error } = await signIn(email, password);
-
-      if (error) {
-        toast({
-          title: "Error",
-          description: error.message,
-          variant: "destructive",
-        });
+        // Only allow creating the specific admin account
+        if (email !== 'saranshsewatrust@gmail.com' || password !== 'Sahil@6767') {
+          toast({
+            title: "Access Denied",
+            description: "Only the designated admin account can be created.",
+            variant: "destructive",
+          });
+          setLoading(false);
+          return;
+        }
+        
+        const { error } = await signUp(email, password);
+        if (error) {
+          toast({
+            title: "Error",
+            description: error.message,
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Success",
+            description: "Admin account created! Please check your email for verification.",
+          });
+          setIsLogin(true);
+          setShowAdminSetup(false);
+        }
       } else {
-        toast({
-          title: "Success",
-          description: "Signed in successfully!",
-        });
-        navigate('/');
+        const { error } = await signIn(email, password);
+        if (error) {
+          toast({
+            title: "Error",
+            description: error.message,
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Success",
+            description: "Signed in successfully!",
+          });
+          navigate('/');
+        }
       }
     } catch (error) {
       toast({
@@ -68,13 +86,20 @@ const Auth = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>Admin Sign In</CardTitle>
+          <CardTitle>{!isLogin ? 'Create Admin Account' : 'Admin Sign In'}</CardTitle>
           <CardDescription>
-            Access restricted to authorized users only
+            {!isLogin ? 'One-time admin account setup' : 'Access restricted to authorized users only'}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
+            {!isLogin && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3 mb-4">
+                <p className="text-sm text-yellow-800">
+                  Enter the exact admin credentials to create the account
+                </p>
+              </div>
+            )}
             <div>
               <Input
                 type="email"
@@ -94,9 +119,33 @@ const Auth = () => {
               />
             </div>
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Loading...' : 'Sign In'}
+              {loading ? 'Loading...' : (!isLogin ? 'Create Admin Account' : 'Sign In')}
             </Button>
           </form>
+          
+          {isLogin && (
+            <div className="mt-4 text-center">
+              <button
+                type="button"
+                onClick={() => setIsLogin(false)}
+                className="text-sm text-blue-600 hover:text-blue-500"
+              >
+                Need to create admin account?
+              </button>
+            </div>
+          )}
+          
+          {!isLogin && (
+            <div className="mt-4 text-center">
+              <button
+                type="button"
+                onClick={() => setIsLogin(true)}
+                className="text-sm text-blue-600 hover:text-blue-500"
+              >
+                Back to sign in
+              </button>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
