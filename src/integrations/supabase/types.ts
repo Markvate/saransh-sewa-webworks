@@ -260,6 +260,10 @@ export type Database = {
         Args: { password_input: string; username_input: string }
         Returns: boolean
       }
+      create_admin_user: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
