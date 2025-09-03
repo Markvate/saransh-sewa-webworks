@@ -20,19 +20,22 @@ interface GalleryPhoto {
 
 const Gallery = () => {
   const [photos, setPhotos] = useState<GalleryPhoto[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [photosLoading, setPhotosLoading] = useState(true);
   const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const { user } = useAuth();
+  const { user, session, loading } = useAuth();
 
   const isAdmin = user?.email === 'Saranshsewatrust@gmail.com';
   
-  // Debug logging
-  console.log('Gallery Debug:', { 
+  // Enhanced debug logging
+  console.log('Gallery Debug - Auth State:', { 
     userEmail: user?.email, 
+    userId: user?.id,
+    sessionExists: !!session,
+    isLoading: loading,
     isAdmin, 
     userExists: !!user 
   });
@@ -54,7 +57,7 @@ const Gallery = () => {
       console.error('Error fetching photos:', error);
       toast.error('Failed to load gallery photos');
     } finally {
-      setLoading(false);
+      setPhotosLoading(false);
     }
   };
 
