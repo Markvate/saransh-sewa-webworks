@@ -26,9 +26,7 @@ const Gallery = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const { user, session, loading } = useAuth();
-
-  const isAdmin = user?.email === 'Saranshsewatrust@gmail.com';
+  const { user, session, loading, isAdmin } = useAuth();
   
   // Enhanced debug logging
   console.log('Gallery Debug - Auth State:', { 
