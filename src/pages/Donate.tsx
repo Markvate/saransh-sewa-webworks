@@ -16,7 +16,7 @@ const Donate = () => {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText('saranshsewatrust@paytm');
+      await navigator.clipboard.writeText('sudhagroup@sbi');
       toast({
         title: "कॉपी किया गया! • Copied!",
         description: "UPI ID आपके क्लिपबोर्ड में कॉपी हो गई है • UPI ID copied to clipboard",
@@ -110,7 +110,7 @@ const Donate = () => {
                         <div className="bg-white rounded p-3 border border-orange-200">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                             <p className="text-sm sm:text-lg font-mono text-gray-800 break-all">
-                              saranshsewatrust@paytm
+                              sudhagroup@sbi
                             </p>
                             <Button
                               variant="outline"
