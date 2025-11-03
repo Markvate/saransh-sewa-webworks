@@ -94,7 +94,7 @@ const Donate = () => {
                       <div className="text-center">
                         <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
                           <img 
-                            src="/lovable-uploads/donation-qr-code.png" 
+                            src="/lovable-uploads/donation-qr-cropped.png" 
                             alt="QR Code for Donation" 
                             className="h-48 w-48 sm:h-64 sm:w-64 mx-auto mb-4 object-contain"
                           />
