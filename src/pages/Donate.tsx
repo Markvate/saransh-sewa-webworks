@@ -94,9 +94,9 @@ const Donate = () => {
                       <div className="text-center">
                         <div className="bg-white border-4 border-orange-200 rounded-lg p-4 sm:p-6 inline-block">
                           <img 
-                            src="/lovable-uploads/4f573f89-0673-4a9c-bf46-1ba9ca2d1bc2.png" 
+                            src="/lovable-uploads/donation-qr-code.png" 
                             alt="QR Code for Donation" 
-                            className="h-32 w-32 sm:h-48 sm:w-48 mx-auto mb-4"
+                            className="h-48 w-48 sm:h-64 sm:w-64 mx-auto mb-4 object-contain"
                           />
                           <p className="text-sm text-gray-600 font-medium">
                             QR कोड स्कैन करें • Scan QR Code to Donate
@@ -136,13 +136,13 @@ const Donate = () => {
                             <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
-                            <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>
+                            <p><strong>Account Number:</strong> 44204766908</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
-                            <p><strong>IFSC Code:</strong> XXXXXXXXX</p>
+                            <p><strong>IFSC Code:</strong> SBIN0011331</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
-                            <p><strong>Bank:</strong> Axis Bank</p>
+                            <p><strong>Bank:</strong> State Bank of India</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
                             <p><strong>Branch:</strong> Sultanpur, UP</p>
