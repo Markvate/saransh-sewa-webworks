@@ -72,16 +72,26 @@ const Gallery = () => {
       return;
     }
 
+    if (!isAdmin) {
+      toast.error('Only admins can upload photos. Please log in as admin.');
+      return;
+    }
+
     setUploading(true);
     try {
       // Upload to storage
       const fileExt = selectedFile.name.split('.').pop();
       const fileName = `${Date.now()}.${fileExt}`;
-      const { error: uploadError } = await supabase.storage
+      const { error: uploadError, data: uploaded } = await supabase.storage
         .from('gallery')
         .upload(fileName, selectedFile);
 
-      if (uploadError) throw uploadError;
+      if (uploadError) {
+        console.error('Storage upload error:', uploadError);
+        throw uploadError;
+      }
+
+      console.log('Storage upload success:', uploaded);
 
       // Get public URL
       const { data: { publicUrl } } = supabase.storage
@@ -95,9 +105,13 @@ const Gallery = () => {
           title: title.trim(),
           description: description.trim() || null,
           image_url: publicUrl,
+          uploaded_by: user?.id ?? null,
         });
 
-      if (dbError) throw dbError;
+      if (dbError) {
+        console.error('DB insert error:', dbError);
+        throw dbError;
+      }
 
       toast.success('Photo uploaded successfully!');
       setUploadDialogOpen(false);
@@ -105,9 +119,10 @@ const Gallery = () => {
       setDescription('');
       setSelectedFile(null);
       fetchPhotos();
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error uploading photo:', error);
-      toast.error('Failed to upload photo');
+      const message = error?.message || 'Failed to upload photo';
+      toast.error(message);
     } finally {
       setUploading(false);
     }
