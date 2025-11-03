@@ -40,7 +40,7 @@ export type Database = {
           created_at: string
           event_type: string
           id: string
-          ip_address: unknown | null
+          ip_address: unknown
           page_path: string
           referrer: string | null
           session_id: string | null
@@ -50,7 +50,7 @@ export type Database = {
           created_at?: string
           event_type: string
           id?: string
-          ip_address?: unknown | null
+          ip_address?: unknown
           page_path: string
           referrer?: string | null
           session_id?: string | null
@@ -60,7 +60,7 @@ export type Database = {
           created_at?: string
           event_type?: string
           id?: string
-          ip_address?: unknown | null
+          ip_address?: unknown
           page_path?: string
           referrer?: string | null
           session_id?: string | null
@@ -260,10 +260,7 @@ export type Database = {
         Args: { password_input: string; username_input: string }
         Returns: boolean
       }
-      create_admin_user: {
-        Args: Record<PropertyKey, never>
-        Returns: string
-      }
+      create_admin_user: { Args: never; Returns: string }
     }
     Enums: {
       [_ in never]: never
