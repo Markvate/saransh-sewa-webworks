@@ -24,107 +24,61 @@ const Privacy = () => {
               
               <div className="space-y-6 text-gray-700">
                 <section>
-                  <p className="mb-4">
-                    <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-IN')}
-                  </p>
                   <p>
-                    Saransh Sewa Trust ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+                    At Saransh Sewa Trust, we are committed to protecting the privacy and personal information of our donors, beneficiaries, volunteers, and visitors. This Privacy Policy explains how we collect, use, and safeguard your data.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. Information We Collect</h2>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Personal Information</h3>
-                  <p className="mb-3">We may collect personal information that you provide to us, including:</p>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Information We Collect</h2>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Name, email address, phone number</li>
-                    <li>Mailing address</li>
-                    <li>Payment information (processed securely through payment gateways)</li>
-                    <li>Volunteer application details</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-4">Automatically Collected Information</h3>
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>IP address and browser information</li>
-                    <li>Device information</li>
-                    <li>Usage data and analytics</li>
+                    <li>Personal details such as name, email, mobile number, and address when you donate, volunteer, or contact us.</li>
+                    <li>Transaction details for donations.</li>
+                    <li>Non-personal data such as browser type, IP address, and device information.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. How We Use Your Information</h2>
-                  <p className="mb-3">We use the information we collect to:</p>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">How We Use Your Information</h2>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Process donations and issue tax receipts</li>
-                    <li>Communicate with you about our programs and activities</li>
-                    <li>Send newsletters and updates (with your consent)</li>
-                    <li>Process volunteer applications</li>
-                    <li>Improve our website and services</li>
-                    <li>Comply with legal obligations</li>
+                    <li>To process donations and issue receipts.</li>
+                    <li>To communicate updates, campaigns, and trust activities.</li>
+                    <li>To respond to inquiries and provide assistance.</li>
+                    <li>To improve our website and services.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Information Sharing</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Data Protection</h2>
+                  <p>
+                    We follow strict security practices to ensure your information is stored safely and is never misused.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Third-Party Sharing</h2>
+                  <p>
+                    We do not sell or rent your information. Data may only be shared with trusted vendors such as payment gateways solely for donation processing.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Your Rights</h2>
+                  <p>
+                    You may request correction, deletion, or access to your personal information anytime.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Contact Us</h2>
                   <p className="mb-3">
-                    We do not sell, trade, or rent your personal information to third parties. We may share your information with:
+                    For privacy-related concerns, contact:
                   </p>
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Payment processors to handle donations securely</li>
-                    <li>Service providers who assist in our operations</li>
-                    <li>Legal authorities when required by law</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. Data Security</h2>
-                  <p>
-                    We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. Cookies</h2>
-                  <p>
-                    Our website uses cookies to enhance user experience and analyze site traffic. You can control cookie preferences through your browser settings.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. Your Rights</h2>
-                  <p className="mb-3">You have the right to:</p>
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Access your personal information</li>
-                    <li>Correct inaccurate information</li>
-                    <li>Request deletion of your information</li>
-                    <li>Opt-out of marketing communications</li>
-                    <li>Withdraw consent at any time</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Children's Privacy</h2>
-                  <p>
-                    Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">8. Changes to This Policy</h2>
-                  <p>
-                    We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">9. Contact Us</h2>
-                  <p>
-                    If you have questions or concerns about this Privacy Policy, please contact us:
-                  </p>
-                  <div className="mt-3 space-y-1">
-                    <p><strong>Email:</strong> info@saranshsewatrust.org</p>
-                    <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-                    <p><strong>Address:</strong> Saransh Sewa Trust, Sultanpur, Uttar Pradesh, India</p>
+                  <div className="space-y-1">
+                    <p><strong>Saransh Sewa Trust</strong></p>
+                    <p><strong>Phone:</strong> +91 9415607400</p>
+                    <p><strong>Email:</strong> saranshsewatrust@gmail.com</p>
+                    <p><strong>Address:</strong> kamapur lambhua sultanpur UP 222302</p>
                   </div>
                 </section>
               </div>
