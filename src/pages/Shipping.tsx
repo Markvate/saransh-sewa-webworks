@@ -24,53 +24,46 @@ const Shipping = () => {
               
               <div className="space-y-6 text-gray-700">
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">About This Policy</h2>
                   <p>
-                    Saransh Sewa Trust is a non-profit charitable organization. We do not sell physical products or goods through our website. This page exists for informational purposes only.
+                    Saransh Sewa Trust may ship physical items such as donation receipts, certificates, awareness materials, or merchandise related to campaigns.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Digital Receipts & Documentation</h2>
-                  <p className="mb-3">
-                    When you make a donation, you will receive:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Email confirmation of your donation immediately</li>
-                    <li>Tax receipt (80G certificate) via email within 3-5 business days</li>
-                    <li>Digital copies of all documentation related to your contribution</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Physical Documentation (If Requested)</h2>
-                  <p className="mb-3">
-                    If you require physical copies of donation receipts or certificates, please contact us at:
-                  </p>
-                  <div className="space-y-1 mb-3">
-                    <p><strong>Email:</strong> info@saranshsewatrust.org</p>
-                    <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-                  </div>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Dispatch Time</h2>
                   <p>
-                    Physical documents will be dispatched via registered post within 7-10 business days of your request.
+                    Items are usually dispatched within 3–7 working days.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Merchandise (Future)</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Delivery Time</h2>
                   <p>
-                    If Saransh Sewa Trust launches merchandise or fundraising products in the future, detailed shipping information will be updated on this page.
+                    Delivery time may vary depending on your location and courier service.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Delays</h2>
+                  <p>
+                    Delays may occur due to holidays, natural events, or logistical issues. We will keep you informed where possible.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">International Shipping</h2>
+                  <p>
+                    International shipments may require additional processing time and charges.
                   </p>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Contact Us</h2>
-                  <p>
-                    For any questions or special requests regarding documentation or future merchandise:
-                  </p>
-                  <div className="mt-3 space-y-1">
-                    <p><strong>Email:</strong> info@saranshsewatrust.org</p>
-                    <p><strong>Address:</strong> Saransh Sewa Trust, Sultanpur, Uttar Pradesh, India</p>
+                  <div className="space-y-1">
+                    <p><strong>Saransh Sewa Trust</strong></p>
+                    <p><strong>Phone:</strong> +91 9415607400</p>
+                    <p><strong>Email:</strong> saranshsewatrust@gmail.com</p>
+                    <p><strong>Address:</strong> kamapur lambhua sultanpur UP 222302</p>
                   </div>
                 </section>
               </div>

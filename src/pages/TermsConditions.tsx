@@ -24,71 +24,52 @@ const TermsConditions = () => {
               
               <div className="space-y-6 text-gray-700">
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">1. Acceptance of Terms</h2>
                   <p>
-                    By accessing and using the Saransh Sewa Trust website, you accept and agree to be bound by the terms and conditions outlined in this agreement. If you do not agree with these terms, please refrain from using our website.
+                    By accessing the Saransh Sewa Trust website, you agree to the following Terms & Conditions. Please read them carefully.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">2. Use of Website</h2>
-                  <p className="mb-3">
-                    You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of others or restrict their use of the website.
-                  </p>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Use of Website</h2>
                   <p>
-                    Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.
+                    You agree to use this website responsibly and only for lawful purposes related to charitable activities.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">3. Donations</h2>
-                  <p className="mb-3">
-                    All donations made through this website are voluntary and will be used for charitable purposes as determined by Saransh Sewa Trust.
-                  </p>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Donations</h2>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Donations are subject to our Cancellation & Refunds Policy</li>
-                    <li>Tax receipts will be provided as per applicable laws</li>
-                    <li>We reserve the right to accept or decline any donation</li>
+                    <li>All donations made to Saransh Sewa Trust are voluntary.</li>
+                    <li>Once processed, donations are generally non-refundable unless a valid technical issue occurs.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">4. Intellectual Property</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Content Ownership</h2>
                   <p>
-                    All content on this website, including text, graphics, logos, images, and software, is the property of Saransh Sewa Trust and is protected by copyright laws. Unauthorized reproduction or distribution is prohibited.
+                    All text, images, videos, and logos on this website belong to Saransh Sewa Trust and cannot be copied, republished, or used without permission.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">5. Limitation of Liability</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Accuracy of Information</h2>
                   <p>
-                    Saransh Sewa Trust will not be liable for any damages arising from the use or inability to use this website, including but not limited to direct, indirect, incidental, or consequential damages.
+                    We strive to keep all information accurate and updated. However, we do not guarantee complete accuracy at all times.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">6. Changes to Terms</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Limitation of Liability</h2>
                   <p>
-                    We reserve the right to modify these terms and conditions at any time. Your continued use of the website following any changes constitutes acceptance of those changes.
+                    Saransh Sewa Trust is not responsible for any loss, damage, or inconvenience that may arise from the use of the website.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">7. Governing Law</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Modifications</h2>
                   <p>
-                    These terms and conditions are governed by the laws of India. Any disputes will be subject to the exclusive jurisdiction of the courts in Sultanpur, Uttar Pradesh.
+                    We reserve the right to update or modify these Terms & Conditions at any time.
                   </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Contact Information</h2>
-                  <p>
-                    For questions about these Terms and Conditions, please contact us at:
-                  </p>
-                  <div className="mt-3 space-y-1">
-                    <p><strong>Email:</strong> info@saranshsewatrust.org</p>
-                    <p><strong>Address:</strong> Sultanpur, Uttar Pradesh, India</p>
-                  </div>
                 </section>
               </div>
             </div>

@@ -25,44 +25,44 @@ const CancellationRefunds = () => {
               <div className="space-y-6 text-gray-700">
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Donation Cancellation</h2>
-                  <p className="mb-3">
-                    Saransh Sewa Trust appreciates your generous support. Once a donation is made, it is generally considered final. However, we understand that mistakes can happen.
-                  </p>
                   <p>
-                    If you believe a donation was made in error, please contact us within 24 hours at <a href="mailto:info@saranshsewatrust.org" className="text-orange-600 hover:underline">info@saranshsewatrust.org</a> with your transaction details.
+                    If you made an incorrect donation or a duplicate payment, you may request cancellation within 24 hours by contacting us directly.
                   </p>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Refund Policy</h2>
                   <p className="mb-3">
-                    Refunds will be processed on a case-by-case basis and are subject to the following conditions:
+                    Refunds may be issued only under the following conditions:
                   </p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Duplicate donations made by mistake</li>
-                    <li>Technical errors resulting in incorrect donation amounts</li>
-                    <li>Unauthorized transactions (requires proof)</li>
+                    <li>Accidental duplicate donations.</li>
+                    <li>Technical/payment gateway errors.</li>
+                    <li>Wrong amount debited due to system malfunction.</li>
                   </ul>
                   <p className="mt-3">
-                    Approved refunds will be processed within 7-10 business days to the original payment method.
+                    Refunds are not provided for voluntary donations made intentionally.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Non-Refundable Donations</h2>
-                  <p>
-                    Donations are generally non-refundable as they are utilized immediately for charitable activities. Tax receipts issued for donations cannot be honored if a refund is processed.
-                  </p>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-3">Refund Request Requirements</h2>
+                  <p className="mb-3">To request a refund, please provide:</p>
+                  <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li>Transaction ID</li>
+                    <li>Donor name</li>
+                    <li>Date of donation</li>
+                    <li>Screenshot/payment proof</li>
+                  </ul>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-semibold text-gray-900 mb-3">Contact Us</h2>
-                  <p>
-                    For any queries regarding cancellations or refunds, please reach out to us at:
-                  </p>
-                  <div className="mt-3 space-y-1">
-                    <p><strong>Email:</strong> info@saranshsewatrust.org</p>
-                    <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
+                  <div className="space-y-1">
+                    <p><strong>Saransh Sewa Trust</strong></p>
+                    <p><strong>Phone:</strong> +91 9415607400</p>
+                    <p><strong>Email:</strong> saranshsewatrust@gmail.com</p>
+                    <p><strong>Address:</strong> kamapur lambhua sultanpur UP 222302</p>
                   </div>
                 </section>
               </div>
