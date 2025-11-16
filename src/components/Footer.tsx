@@ -141,8 +141,21 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              © 2024 Saransh Sewa Trust. All rights reserved. | 
-              <span className="ml-1">Registered Non-Profit Organization</span>
+              <div className="mb-2">
+                © 2024 Saransh Sewa Trust. All rights reserved. | 
+                <span className="ml-1">Registered Non-Profit Organization</span>
+              </div>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                <a href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                <span>•</span>
+                <a href="/terms-conditions" className="hover:text-orange-500 transition-colors">Terms & Conditions</a>
+                <span>•</span>
+                <a href="/cancellation-refunds" className="hover:text-orange-500 transition-colors">Cancellation & Refunds</a>
+                <span>•</span>
+                <a href="/shipping" className="hover:text-orange-500 transition-colors">Shipping</a>
+                <span>•</span>
+                <a href="/contact-us" className="hover:text-orange-500 transition-colors">Contact Us</a>
+              </div>
             </div>
 
             {/* Social Links */}

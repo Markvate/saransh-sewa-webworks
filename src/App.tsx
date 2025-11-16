@@ -18,6 +18,11 @@ import Messages from "./pages/Messages";
 import Mail from "./pages/Mail";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./components/AdminLogin";
+import CancellationRefunds from "./pages/CancellationRefunds";
+import TermsConditions from "./pages/TermsConditions";
+import Shipping from "./pages/Shipping";
+import Privacy from "./pages/Privacy";
+import ContactUs from "./pages/ContactUs";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +70,11 @@ const App = () => {
                 path="/mail" 
                 element={isAdminLoggedIn ? <Mail /> : <AdminLogin onLogin={handleAdminLogin} />} 
               />
+              <Route path="/cancellation-refunds" element={<CancellationRefunds />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
+              <Route path="/shipping" element={<Shipping />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/contact-us" element={<ContactUs />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
