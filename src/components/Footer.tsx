@@ -1,5 +1,5 @@
-
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
@@ -146,15 +146,15 @@ const Footer = () => {
                 <span className="ml-1">Registered Non-Profit Organization</span>
               </div>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <a href="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
+                <Link to="/privacy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
                 <span>•</span>
-                <a href="/terms-conditions" className="hover:text-orange-500 transition-colors">Terms & Conditions</a>
+                <Link to="/terms-conditions" className="hover:text-orange-500 transition-colors">Terms & Conditions</Link>
                 <span>•</span>
-                <a href="/cancellation-refunds" className="hover:text-orange-500 transition-colors">Cancellation & Refunds</a>
+                <Link to="/cancellation-refunds" className="hover:text-orange-500 transition-colors">Cancellation & Refunds</Link>
                 <span>•</span>
-                <a href="/shipping" className="hover:text-orange-500 transition-colors">Shipping</a>
+                <Link to="/shipping" className="hover:text-orange-500 transition-colors">Shipping</Link>
                 <span>•</span>
-                <a href="/contact-us" className="hover:text-orange-500 transition-colors">Contact Us</a>
+                <Link to="/contact-us" className="hover:text-orange-500 transition-colors">Contact Us</Link>
               </div>
             </div>
 
