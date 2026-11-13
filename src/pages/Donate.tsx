@@ -133,7 +133,7 @@ const Donate = () => {
                         </h4>
                         <div className="space-y-3 text-sm">
                           <div className="bg-white rounded p-3 border border-gray-200">
-                            <p><strong>Account Name:</strong> Saransh Sewa Trust</p>
+                            <p><strong>Account Name:</strong> Sudha Group</p>
                           </div>
                           <div className="bg-white rounded p-3 border border-gray-200">
                             <p><strong>Account Number:</strong> 44204766908</p>
